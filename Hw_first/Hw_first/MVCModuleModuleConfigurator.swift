@@ -1,4 +1,4 @@
-//  
+//
 //  MVCModuleModuleConfigurator.swift
 //  Hw_first
 //

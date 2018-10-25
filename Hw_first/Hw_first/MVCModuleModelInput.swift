@@ -1,4 +1,4 @@
-//  
+//
 //  MVCModuleModelInput.swift
 //  Hw_first
 //
@@ -6,4 +6,6 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol MVCModuleModelInput {}
+protocol MVCModuleModelInput {
+    func load()
+}
