@@ -10,7 +10,8 @@ import Foundation
 
 final class MVCModuleModel: MVCModuleModelInput {
     weak var output: MVCModuleModelOutput!
+    
     func load(){
-        print("Called func load()")
+        output.modelDidLoad()
     }
 }

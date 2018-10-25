@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         print("viewDidLayoutSubviews")
     }
-
+    
     
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidAppear")
@@ -61,6 +61,6 @@ class ViewController: UIViewController {
         print ("Memory overload your app will be closed")
     }
     
-
+    
 }
 

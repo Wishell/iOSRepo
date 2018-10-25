@@ -92,6 +92,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4812537221823D25006D014C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4812537321823D36006D014C /* MVC */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4812537321823D36006D014C /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				4812537721824BB5006D014C /* Controller */,
+				4812537621823D62006D014C /* Model */,
+				4812537521823D5B006D014C /* View */,
+				4812537421823D3D006D014C /* Configurator */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		4812537421823D3D006D014C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				48AD3B87218118FB0058A624 /* MVCModuleModuleInitializer.swift */,
+				48AD3B8C218118FB0058A624 /* MVCModuleModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		4812537521823D5B006D014C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48AD3B89218118FB0058A624 /* MVCModuleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4812537621823D62006D014C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48AD3B85218118FB0058A624 /* MVCModuleModelOutput.swift */,
+				48AD3B8A218118FB0058A624 /* MVCModuleModel.swift */,
+				48AD3B8B218118FB0058A624 /* MVCModuleModelInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4812537721824BB5006D014C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48AD3B86218118FB0058A624 /* MVCModuleViewControllerInput.swift */,
+				48AD3B88218118FB0058A624 /* MVCModuleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		4842DD71217F7BDD00241CF7 = {
 			isa = PBXGroup;
 			children = (
@@ -115,17 +170,10 @@
 		4842DD7C217F7BDD00241CF7 /* Hw_first */ = {
 			isa = PBXGroup;
 			children = (
+				4812537221823D25006D014C /* Modules */,
 				4842DD7D217F7BDD00241CF7 /* AppDelegate.swift */,
 				4842DD7F217F7BDD00241CF7 /* ViewController.swift */,
 				4842DD81217F7BDD00241CF7 /* Main.storyboard */,
-				48AD3B85218118FB0058A624 /* MVCModuleModelOutput.swift */,
-				48AD3B86218118FB0058A624 /* MVCModuleViewControllerInput.swift */,
-				48AD3B87218118FB0058A624 /* MVCModuleModuleInitializer.swift */,
-				48AD3B88218118FB0058A624 /* MVCModuleViewController.swift */,
-				48AD3B89218118FB0058A624 /* MVCModuleView.swift */,
-				48AD3B8A218118FB0058A624 /* MVCModuleModel.swift */,
-				48AD3B8B218118FB0058A624 /* MVCModuleModelInput.swift */,
-				48AD3B8C218118FB0058A624 /* MVCModuleModuleConfigurator.swift */,
 				4842DD84217F7BDE00241CF7 /* Assets.xcassets */,
 				4842DD86217F7BDE00241CF7 /* LaunchScreen.storyboard */,
 				4842DD89217F7BDE00241CF7 /* Info.plist */,
@@ -471,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4VC275U8N;
 				INFOPLIST_FILE = Hw_first/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4VC275U8N;
 				INFOPLIST_FILE = Hw_first/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

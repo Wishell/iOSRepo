@@ -14,15 +14,14 @@ final class MVCModuleViewController: UIViewController {
     
     lazy var contentView: MVCModuleViewInput = {return view as! MVCModuleViewInput}()
     override func awakeFromNib() {
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         modelDidLoad()
     }
 }
@@ -30,7 +29,7 @@ final class MVCModuleViewController: UIViewController {
 // MARK: - MVCModuleModelOutput
 extension MVCModuleViewController: MVCModuleModelOutput {
     func modelDidLoad() {
-        model.load()
+        print("Model loaded")
     }
 }
 
