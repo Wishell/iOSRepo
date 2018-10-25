@@ -12,4 +12,7 @@ final class MVCModuleModel: MVCModuleModelInput {
     
     weak var output: MVCModuleModelOutput!
     
+    func load() {
+        print("Load")
+    }
 }
