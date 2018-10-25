@@ -1,4 +1,4 @@
-//  
+//
 //  MVCModuleModel.swift
 //  Hw_first
 //
@@ -9,7 +9,8 @@
 import Foundation
 
 final class MVCModuleModel: MVCModuleModelInput {
-    
     weak var output: MVCModuleModelOutput!
-    
+    func load(){
+        print("Called func load()")
+    }
 }
