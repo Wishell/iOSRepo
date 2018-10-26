@@ -10,7 +10,14 @@ import UIKit
 
 protocol FirstViewInput: class {}
 
-final class FirstView: UIView {}
+final class FirstView: UIView {
+    
+    @IBOutlet weak var FirstLabel: UILabel!
+    @IBOutlet weak var FirstText: UITextField!
+    @IBOutlet weak var FirstButton: UIButton!
+    
+}
 
 // MARK: - FirstViewInput
 extension FirstView: FirstViewInput {}
+

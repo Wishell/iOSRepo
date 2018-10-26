@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4812538521839EB9006D014C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812538421839EB9006D014C /* AppDelegate.swift */; };
-		4812538721839EB9006D014C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812538621839EB9006D014C /* ViewController.swift */; };
 		4812538A21839EB9006D014C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4812538821839EB9006D014C /* Main.storyboard */; };
 		4812538C21839EBA006D014C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4812538B21839EBA006D014C /* Assets.xcassets */; };
 		4812538F21839EBA006D014C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4812538D21839EBA006D014C /* LaunchScreen.storyboard */; };
@@ -52,7 +51,6 @@
 /* Begin PBXFileReference section */
 		4812538121839EB9006D014C /* HW-8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4812538421839EB9006D014C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4812538621839EB9006D014C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4812538921839EB9006D014C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4812538B21839EBA006D014C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4812538E21839EBA006D014C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			children = (
 				481253ED2183A1AF006D014C /* Modules */,
 				4812538421839EB9006D014C /* AppDelegate.swift */,
-				4812538621839EB9006D014C /* ViewController.swift */,
 				4812538821839EB9006D014C /* Main.storyboard */,
 				4812538B21839EBA006D014C /* Assets.xcassets */,
 				4812538D21839EBA006D014C /* LaunchScreen.storyboard */,
@@ -348,7 +345,6 @@
 				4812540E2183A310006D014C /* FirstView.swift in Sources */,
 				4812541B2183A34F006D014C /* SecondViewControllerInput.swift in Sources */,
 				4812540B2183A310006D014C /* FirstViewControllerInput.swift in Sources */,
-				4812538721839EB9006D014C /* ViewController.swift in Sources */,
 				4812541D2183A34F006D014C /* SecondViewController.swift in Sources */,
 				4812540A2183A310006D014C /* FirstModelOutput.swift in Sources */,
 				4812541E2183A34F006D014C /* SecondView.swift in Sources */,
