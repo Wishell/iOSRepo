@@ -16,6 +16,11 @@ final class FirstView: UIView {
     @IBOutlet weak var FirstText: UITextField!
     @IBOutlet weak var FirstButton: UIButton!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
 }
 
 // MARK: - FirstViewInput
