@@ -1,4 +1,4 @@
-//  
+//
 //  FirstViewController.swift
 //  HW-8
 //
@@ -7,56 +7,51 @@
 //
 
 import UIKit
+enum FirstViewAPPError: Error {
+    case noEmptyTextField
+}
+
+extension FirstViewAPPError: LocalizedError {
+    
+    var localizedDescription: String {
+        switch self {
+        case .noEmptyTextField:
+            return "Text Field not empty"
+        }
+    }
+}
 
 final class FirstViewController: UIViewController {
-    
+
     var model: FirstModelInput!
     lazy var contentView: FirstViewInput = { return view as! FirstViewInput }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestureToHideKeyboard()
-        
-        contentView.buttonAction = {[unowned self] in
+
+        contentView.buttonAction = { [unowned self] in
             if let text = self.model.text, !text.isEmpty {
-                let alertController = UIAlertController(title: "PEACEDEATH", message: "ERROR", preferredStyle: .actionSheet)
-                let alertAction = UIAlertAction(title: "Ok", style: .cancel){(action) in }
-                alertController.addAction(alertAction)
-                self.present(alertController, animated: true, completion: nil)
+                UIAlertController.show(self, error: FirstViewAPPError.noEmptyTextField)
             } else {
                 self.performSegue(withIdentifier: "showSecond", sender: nil)
             }
         }
-        
-        contentView.hideKeyboard = {[unowned self] in self.view.endEditing(true)}
-        
+        contentView.hideKeyboard = { [unowned self] in self.view.endEditing(true) }
         contentView.textFromField = { [unowned self] (text) in
-           self.model.text = text
+            self.model.text = text
         }
-        
+
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "show"
-//    }
-    
-      @IBAction func unwind(segue: UIStoryboardSegue) {}
-    
+
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        contentView.setLabelText(text: "Unwind from second View")
+    }
+
 }
 
 // MARK: - FirstModelOutput
-extension FirstViewController: FirstModelOutput {
-    
-    
-}
+extension FirstViewController: FirstModelOutput { }
 
 // MARK: - FirstViewControllerInput
-extension FirstViewController: FirstViewControllerInput {}
-
-extension UIViewController {
-    func addGestureToHideKeyboard(){
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-}
+extension FirstViewController: FirstViewControllerInput { }

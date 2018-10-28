@@ -17,17 +17,12 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
         model.load()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! FirstViewController
-        controller.contentView.setLabelText(text: "Unwind from second View")
-    }
 }
 
 // MARK: - SecondModelOutput
 extension SecondViewController: SecondModelOutput {
     func modelDidFail(_ error: Error?) {
-        print("PPPPPPP")
+        UIAlertController.show(self, error: error)
     }
     
     func modelDidLoad(_ image: UIImage?) {

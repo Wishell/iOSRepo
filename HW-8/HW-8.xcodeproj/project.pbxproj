@@ -30,6 +30,8 @@
 		481254202183A34F006D014C /* SecondModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254182183A34F006D014C /* SecondModelInput.swift */; };
 		481254212183A34F006D014C /* SecondModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254192183A34F006D014C /* SecondModuleConfigurator.swift */; };
 		4812542421865CEA006D014C /* whatsup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4812542321865CEA006D014C /* whatsup.jpg */; };
+		4812542721866220006D014C /* UIAlertController+ErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812542621866220006D014C /* UIAlertController+ErrorDescription.swift */; };
+		4812542921866449006D014C /* UIViewController+HideKeyboardGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812542821866449006D014C /* UIViewController+HideKeyboardGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		481254182183A34F006D014C /* SecondModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModelInput.swift; sourceTree = "<group>"; };
 		481254192183A34F006D014C /* SecondModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModuleConfigurator.swift; sourceTree = "<group>"; };
 		4812542321865CEA006D014C /* whatsup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whatsup.jpg; sourceTree = "<group>"; };
+		4812542621866220006D014C /* UIAlertController+ErrorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ErrorDescription.swift"; sourceTree = "<group>"; };
+		4812542821866449006D014C /* UIViewController+HideKeyboardGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboardGesture.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		4812538321839EB9006D014C /* HW-8 */ = {
 			isa = PBXGroup;
 			children = (
+				48125425218661CB006D014C /* Extensions */,
 				4812542221865B55006D014C /* Resoursces */,
 				481253ED2183A1AF006D014C /* Modules */,
 				4812538421839EB9006D014C /* AppDelegate.swift */,
@@ -219,6 +224,15 @@
 				4812542321865CEA006D014C /* whatsup.jpg */,
 			);
 			path = Resoursces;
+			sourceTree = "<group>";
+		};
+		48125425218661CB006D014C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4812542621866220006D014C /* UIAlertController+ErrorDescription.swift */,
+				4812542821866449006D014C /* UIViewController+HideKeyboardGesture.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +381,8 @@
 				481254112183A310006D014C /* FirstModuleConfigurator.swift in Sources */,
 				481254102183A310006D014C /* FirstModelInput.swift in Sources */,
 				4812540D2183A310006D014C /* FirstViewController.swift in Sources */,
+				4812542921866449006D014C /* UIViewController+HideKeyboardGesture.swift in Sources */,
+				4812542721866220006D014C /* UIAlertController+ErrorDescription.swift in Sources */,
 				4812541C2183A34F006D014C /* SecondModuleInitializer.swift in Sources */,
 				4812538521839EB9006D014C /* AppDelegate.swift in Sources */,
 				4812540C2183A310006D014C /* FirstModuleInitializer.swift in Sources */,

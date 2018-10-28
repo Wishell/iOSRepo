@@ -15,7 +15,6 @@ protocol SecondViewInput: class {
 final class SecondView: UIView {
     @IBOutlet weak var WhatsUp: UIImageView!
     
-    
 }
 
 // MARK: - SecondViewInput
@@ -23,6 +22,4 @@ extension SecondView: SecondViewInput {
     func setImage(image: UIImage) {
         WhatsUp.image = image
     }
-    
-    
 }

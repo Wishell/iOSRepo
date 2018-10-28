@@ -1,4 +1,4 @@
-//  
+//
 //  FirstView.swift
 //  HW-8
 //
@@ -9,34 +9,32 @@
 import UIKit
 
 protocol FirstViewInput: class {
-    var hideKeyboard: (()->Void)! {get set}
-    var textFromField: ((_ text: String?)->Void)? {get set}
-    var buttonAction: (()->Void)! { get set }
+    var hideKeyboard: (() -> Void)! { get set }
+    var textFromField: ((_ text: String?) -> Void)? { get set }
+    var buttonAction: (() -> Void)! { get set }
     func setLabelText (text: String)
 }
 
 final class FirstView: UIView {
-    
+
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var FirstText: UITextField!
     @IBOutlet weak var FirstButton: UIButton!
-    
-    var hideKeyboard: (()->Void)!
-    var buttonAction: (()->Void)!
-    var textFromField: ((_ text: String?)->Void)?
 
-    
+    var hideKeyboard: (() -> Void)!
+    var buttonAction: (() -> Void)!
+    var textFromField: ((_ text: String?) -> Void)?
+
+
     @IBAction func ButtonPress(_ sender: Any) {
-       buttonAction()
+        buttonAction()
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         FirstText.delegate = self
     }
-    
-    
-    
+
 }
 
 // MARK: - FirstViewInput
@@ -46,8 +44,9 @@ extension FirstView: FirstViewInput {
     }
 }
 
-extension FirstView: UITextFieldDelegate{
-    
+// MARK: - UITextFieldDelegate
+extension FirstView: UITextFieldDelegate {
+
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         hideKeyboard()
         return true
