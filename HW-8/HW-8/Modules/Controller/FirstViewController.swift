@@ -13,13 +13,25 @@ final class FirstViewController: UIViewController {
     var model: FirstModelInput!
     lazy var contentView: FirstViewInput = { return view as! FirstViewInput }()
     
-    @IBAction func ButtonPressed(_ sender: Any) {
-        if contentView.isTextempty {
-        self.performSegue(withIdentifier: "showSecond", sender: nil)
-        } else {
-        print ("PEACEDEATH")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        contentView.buttonAction = {isTextempty in
+            if isTextempty {
+                self.performSegue(withIdentifier: "showSecond", sender: nil)
+            } else {
+                print ("PEACEDEATH")
+            }
         }
+        
     }
+    
+//    @IBAction func ButtonPressed(_ sender: Any) {
+//        if contentView.isTextempty {
+//        self.performSegue(withIdentifier: "showSecond", sender: nil)
+//        } else {
+//        print ("PEACEDEATH")
+//        }
+//    }
     
 }
 

@@ -56,6 +56,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ButtonPress:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="0kg-vq-Btm"/>
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3jS-sU-rCS"/>
                                 </connections>
                             </button>

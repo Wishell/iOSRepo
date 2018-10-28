@@ -10,6 +10,7 @@ import UIKit
 
 protocol FirstViewInput: class {
     var isTextempty: Bool {get}
+    var buttonAction: ((_ isEmtyTextFiel: Bool)->Void)? { get set }
 }
 
 final class FirstView: UIView {
@@ -17,7 +18,11 @@ final class FirstView: UIView {
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var FirstText: UITextField!
     @IBOutlet weak var FirstButton: UIButton!
+    var buttonAction: ((_ isEmtyTextFiel: Bool)->Void)?
     
+    @IBAction func ButtonPress(_ sender: Any) {
+       buttonAction!(isTextempty)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         
