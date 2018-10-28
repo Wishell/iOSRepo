@@ -29,6 +29,7 @@
 		4812541F2183A34F006D014C /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254172183A34F006D014C /* SecondModel.swift */; };
 		481254202183A34F006D014C /* SecondModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254182183A34F006D014C /* SecondModelInput.swift */; };
 		481254212183A34F006D014C /* SecondModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254192183A34F006D014C /* SecondModuleConfigurator.swift */; };
+		4812542421865CEA006D014C /* whatsup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4812542321865CEA006D014C /* whatsup.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		481254172183A34F006D014C /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 		481254182183A34F006D014C /* SecondModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModelInput.swift; sourceTree = "<group>"; };
 		481254192183A34F006D014C /* SecondModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModuleConfigurator.swift; sourceTree = "<group>"; };
+		4812542321865CEA006D014C /* whatsup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whatsup.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		4812538321839EB9006D014C /* HW-8 */ = {
 			isa = PBXGroup;
 			children = (
+				4812542221865B55006D014C /* Resoursces */,
 				481253ED2183A1AF006D014C /* Modules */,
 				4812538421839EB9006D014C /* AppDelegate.swift */,
 				4812538821839EB9006D014C /* Main.storyboard */,
@@ -208,6 +211,14 @@
 				481254162183A34F006D014C /* SecondView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4812542221865B55006D014C /* Resoursces */ = {
+			isa = PBXGroup;
+			children = (
+				4812542321865CEA006D014C /* whatsup.jpg */,
+			);
+			path = Resoursces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 			files = (
 				4812538F21839EBA006D014C /* LaunchScreen.storyboard in Resources */,
 				4812538C21839EBA006D014C /* Assets.xcassets in Resources */,
+				4812542421865CEA006D014C /* whatsup.jpg in Resources */,
 				4812538A21839EB9006D014C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

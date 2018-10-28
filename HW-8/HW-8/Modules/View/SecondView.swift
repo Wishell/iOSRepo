@@ -8,9 +8,21 @@
 
 import UIKit
 
-protocol SecondViewInput: class {}
+protocol SecondViewInput: class {
+    func setImage(image: UIImage)
+}
 
-final class SecondView: UIView {}
+final class SecondView: UIView {
+    @IBOutlet weak var WhatsUp: UIImageView!
+    
+    
+}
 
 // MARK: - SecondViewInput
-extension SecondView: SecondViewInput {}
+extension SecondView: SecondViewInput {
+    func setImage(image: UIImage) {
+        WhatsUp.image = image
+    }
+    
+    
+}

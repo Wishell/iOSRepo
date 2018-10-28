@@ -13,6 +13,10 @@ final class SecondViewController: UIViewController {
     var model: SecondModelInput!
     lazy var contentView: SecondViewInput = { return view as! SecondViewInput }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        model.load()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! FirstViewController
@@ -21,7 +25,15 @@ final class SecondViewController: UIViewController {
 }
 
 // MARK: - SecondModelOutput
-extension SecondViewController: SecondModelOutput {}
+extension SecondViewController: SecondModelOutput {
+    func modelDidFail(_ error: Error?) {
+        print("PPPPPPP")
+    }
+    
+    func modelDidLoad(_ image: UIImage?) {
+        contentView.setImage(image: image!)
+    }
+}
 
 // MARK: - SecondViewControllerInput
 extension SecondViewController: SecondViewControllerInput {}
