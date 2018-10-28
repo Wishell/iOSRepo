@@ -9,8 +9,10 @@
 import UIKit
 
 protocol FirstViewInput: class {
-    var isTextempty: Bool {get}
-    var buttonAction: ((_ isEmtyTextFiel: Bool)->Void)? { get set }
+    var hideKeyboard: (()->Void)! {get set}
+    var textFromField: ((_ text: String?)->Void)? {get set}
+    var buttonAction: (()->Void)! { get set }
+    func setLabelText (text: String)
 }
 
 final class FirstView: UIView {
@@ -18,20 +20,44 @@ final class FirstView: UIView {
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var FirstText: UITextField!
     @IBOutlet weak var FirstButton: UIButton!
-    var buttonAction: ((_ isEmtyTextFiel: Bool)->Void)?
+    
+    var hideKeyboard: (()->Void)!
+    var buttonAction: (()->Void)!
+    var textFromField: ((_ text: String?)->Void)?
+
     
     @IBAction func ButtonPress(_ sender: Any) {
-       buttonAction!(isTextempty)
+       buttonAction()
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        FirstText.delegate = self
     }
+    
+    
     
 }
 
 // MARK: - FirstViewInput
 extension FirstView: FirstViewInput {
-    var isTextempty: Bool {return !FirstText.hasText}
+    func setLabelText(text: String) {
+        FirstLabel.text = text
+    }
 }
+
+extension FirstView: UITextFieldDelegate{
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFromField!(FirstText.text)
+        hideKeyboard()
+        return true
+    }
+}
+
 

@@ -6,4 +6,5 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol SecondViewControllerInput: class {}
+protocol SecondViewControllerInput: class {
+}

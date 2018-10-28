@@ -9,7 +9,7 @@
 import Foundation
 
 final class FirstModel: FirstModelInput {
-    
+    var text: String?
     weak var output: FirstModelOutput!
     
 }

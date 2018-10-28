@@ -15,23 +15,32 @@ final class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.buttonAction = {isTextempty in
-            if isTextempty {
-                self.performSegue(withIdentifier: "showSecond", sender: nil)
+        addGestureToHideKeyboard()
+        
+        contentView.buttonAction = {[unowned self] in
+            if let text = self.model.text, !text.isEmpty {
+                let alertController = UIAlertController(title: "PEACEDEATH", message: "ERROR", preferredStyle: .actionSheet)
+                let alertAction = UIAlertAction(title: "Ok", style: .cancel){(action) in }
+                alertController.addAction(alertAction)
+                self.present(alertController, animated: true, completion: nil)
             } else {
-                print ("PEACEDEATH")
+                self.performSegue(withIdentifier: "showSecond", sender: nil)
             }
+        }
+        
+        contentView.hideKeyboard = {[unowned self] in self.view.endEditing(true)}
+        
+        contentView.textFromField = { [unowned self] (text) in
+           self.model.text = text
         }
         
     }
     
-//    @IBAction func ButtonPressed(_ sender: Any) {
-//        if contentView.isTextempty {
-//        self.performSegue(withIdentifier: "showSecond", sender: nil)
-//        } else {
-//        print ("PEACEDEATH")
-//        }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "show"
 //    }
+    
+      @IBAction func unwind(segue: UIStoryboardSegue) {}
     
 }
 
@@ -43,3 +52,11 @@ extension FirstViewController: FirstModelOutput {
 
 // MARK: - FirstViewControllerInput
 extension FirstViewController: FirstViewControllerInput {}
+
+extension UIViewController {
+    func addGestureToHideKeyboard(){
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+}

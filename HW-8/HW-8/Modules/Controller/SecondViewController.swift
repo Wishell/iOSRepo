@@ -13,6 +13,11 @@ final class SecondViewController: UIViewController {
     var model: SecondModelInput!
     lazy var contentView: SecondViewInput = { return view as! SecondViewInput }()
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! FirstViewController
+        controller.contentView.setLabelText(text: "Unwind from second View")
+    }
 }
 
 // MARK: - SecondModelOutput

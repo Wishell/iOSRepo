@@ -6,4 +6,6 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol FirstModelInput {}
+protocol FirstModelInput {
+    var text: String? {get set}
+}
