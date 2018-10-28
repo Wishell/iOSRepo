@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol FirstViewInput: class {}
+protocol FirstViewInput: class {
+    var isTextempty: Bool {get}
+}
 
 final class FirstView: UIView {
     
@@ -24,5 +26,7 @@ final class FirstView: UIView {
 }
 
 // MARK: - FirstViewInput
-extension FirstView: FirstViewInput {}
+extension FirstView: FirstViewInput {
+    var isTextempty: Bool {return !FirstText.hasText}
+}
 
