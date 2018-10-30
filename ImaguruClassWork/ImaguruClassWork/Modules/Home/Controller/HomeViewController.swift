@@ -12,11 +12,21 @@ final class HomeViewController: UIViewController {
     
     var model: HomeModelInput!
     lazy var contentView: HomeViewInput = { return view as! HomeViewInput }()
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        contentView.display(model.data)
+        
+    }
+
 }
 
 // MARK: - HomeModelOutput
 extension HomeViewController: HomeModelOutput {}
 
 // MARK: - HomeViewControllerInput
-extension HomeViewController: HomeViewControllerInput {}
+extension HomeViewController: HomeViewControllerInput {
+    func set (_ data: RegistrationData){
+        model.data = data
+    }
+}

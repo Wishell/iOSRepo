@@ -18,12 +18,20 @@ final class RegistrationViewController: UIViewController {
         contentView.configure(available: false)
         contentView.textChange = { [unowned self] (text, index) in
             self.model.data[index] = text
+            self.contentView.configure(available: self.model.data.isAllFieldSet)
         }
         contentView.action = { [unowned self] in
             self.model.signUp()
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // i have a question here abount what type sender
+        if segue.identifier == "goHome" {
+            let controller = segue.destination as! HomeViewControllerInput
+            let sendedData = sender as! RegistrationData
+            controller.set(sendedData)
+        }
+    }
     
     
     

@@ -10,6 +10,7 @@ import Foundation
 
 enum RegistrationError : Error{
     case shortPassword(Int)
+    case shortNickname(Int)
 }
 
 extension RegistrationError: LocalizedError{
@@ -17,6 +18,8 @@ extension RegistrationError: LocalizedError{
         switch self {
         case .shortPassword(let count):
             return "Paswort must have at least \(count) symbols"
+        case .shortNickname(let count):
+        return "Nickname must have at least \(count) symbols"
         }
     }
 }
@@ -24,13 +27,20 @@ extension RegistrationError: LocalizedError{
 final class RegistrationModel: RegistrationModelInput {
     weak var output: RegistrationModelOutput!
     var data: RegistrationData = RegistrationData()
+    private let minNicknameLength = 3
     private let minPasswordLength = 6
+    
     func signUp() {
-        guard data.password.count >= 6 else {
+        guard data.password.count >= minPasswordLength else {
             output.signUpDidFail(RegistrationError.shortPassword(minPasswordLength))
+            return
+        }
+        guard data.nickname.count >= minNicknameLength else {
+            output.signUpDidFail(RegistrationError.shortNickname(minNicknameLength))
             return
         }
         //Cell API
         output.signUpDidSucces()
     }
+    
 }

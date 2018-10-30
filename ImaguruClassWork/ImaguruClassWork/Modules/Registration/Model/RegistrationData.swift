@@ -12,6 +12,8 @@ struct RegistrationData {
     var nickname: String = ""
     var email: String = ""
     var password: String = ""
+    
+    var isAllFieldSet: Bool  {return !nickname.isEmpty && !email.isEmpty && !password.isEmpty}
 }
 
 extension RegistrationData {

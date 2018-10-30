@@ -16,6 +16,7 @@ protocol RegistrationViewInput: class {
 
 final class RegistrationView: UIView {
     
+    
     @IBOutlet weak var nickname: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!

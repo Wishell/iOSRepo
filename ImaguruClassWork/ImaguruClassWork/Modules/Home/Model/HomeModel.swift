@@ -10,6 +10,7 @@ import Foundation
 
 final class HomeModel: HomeModelInput {
     
+    var data: RegistrationData = RegistrationData()
     weak var output: HomeModelOutput!
     
 }
