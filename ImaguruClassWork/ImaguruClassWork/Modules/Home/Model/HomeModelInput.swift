@@ -8,4 +8,5 @@
 
 protocol HomeModelInput {
     var data: RegistrationData {get set}
+    func logOut()
 }

@@ -6,4 +6,6 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol HomeModelOutput: class {}
+protocol HomeModelOutput: class {
+    func modelDidLogOut()
+}
