@@ -30,6 +30,7 @@
 		4812549521876C86006D014C /* RegistrationModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812548D21876C86006D014C /* RegistrationModelInput.swift */; };
 		4812549621876C86006D014C /* RegistrationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812548E21876C86006D014C /* RegistrationModuleConfigurator.swift */; };
 		481254A221877B33006D014C /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A121877B33006D014C /* RegistrationData.swift */; };
+		481254A4218A4F10006D014C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A3218A4F10006D014C /* EmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		4812548D21876C86006D014C /* RegistrationModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModelInput.swift; sourceTree = "<group>"; };
 		4812548E21876C86006D014C /* RegistrationModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModuleConfigurator.swift; sourceTree = "<group>"; };
 		481254A121877B33006D014C /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
+		481254A3218A4F10006D014C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				4812548C21876C86006D014C /* RegistrationModel.swift */,
 				4812548D21876C86006D014C /* RegistrationModelInput.swift */,
 				481254A121877B33006D014C /* RegistrationData.swift */,
+				481254A3218A4F10006D014C /* EmailValidator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				4812549121876C86006D014C /* RegistrationModuleInitializer.swift in Sources */,
 				4812548421876C72006D014C /* HomeModel.swift in Sources */,
 				4812548321876C72006D014C /* HomeView.swift in Sources */,
+				481254A4218A4F10006D014C /* EmailValidator.swift in Sources */,
 				481254372187681B006D014C /* AppDelegate.swift in Sources */,
 				4812547F21876C72006D014C /* HomeModelOutput.swift in Sources */,
 				4812549421876C86006D014C /* RegistrationModel.swift in Sources */,

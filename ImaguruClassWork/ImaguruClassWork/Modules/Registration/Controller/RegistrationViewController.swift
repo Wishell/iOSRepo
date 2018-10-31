@@ -15,7 +15,7 @@ final class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.configure(available: false)
+        contentView.configure(available: self.model.data.isAllFieldSet)
         contentView.textChange = { [unowned self] (text, index) in
             self.model.data[index] = text
             self.contentView.configure(available: self.model.data.isAllFieldSet)
@@ -34,7 +34,7 @@ final class RegistrationViewController: UIViewController {
     }
     
     
-    
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
 }
 
 // MARK: - RegistrationModelOutput
@@ -53,4 +53,8 @@ extension RegistrationViewController: RegistrationModelOutput {
 }
 
 // MARK: - RegistrationViewControllerInput
-extension RegistrationViewController: RegistrationViewControllerInput {}
+extension RegistrationViewController: RegistrationViewControllerInput {
+    func set(_ data: RegistrationData){
+        model.data = data
+    }
+}

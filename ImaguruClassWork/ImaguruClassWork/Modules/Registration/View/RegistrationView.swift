@@ -12,6 +12,7 @@ protocol RegistrationViewInput: class {
     func configure(available: Bool)
     var textChange: ((String, Int)->Void)? {get set}
     var action: (()->Void)? {get set}
+    func display(_ data: RegistrationData)
 }
 
 final class RegistrationView: UIView {
@@ -37,6 +38,13 @@ extension RegistrationView: RegistrationViewInput {
     func configure(available: Bool) {
         signUp.isEnabled = available
     }
+    
+    func display(_ data: RegistrationData){
+        nickname.text = data.nickname
+        email.text = data.email
+        password.text = data.password
+    }
+    
 }
 
 extension RegistrationView : UITextFieldDelegate{

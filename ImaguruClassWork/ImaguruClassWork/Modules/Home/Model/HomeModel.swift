@@ -16,4 +16,8 @@ final class HomeModel: HomeModelInput {
         data = RegistrationData()
     }
     
+    func back() {
+        
+    }
+    
 }

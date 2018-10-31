@@ -8,4 +8,5 @@
 
 protocol HomeModelOutput: class {
     func modelDidLogOut()
+    func modelDidBack()
 }

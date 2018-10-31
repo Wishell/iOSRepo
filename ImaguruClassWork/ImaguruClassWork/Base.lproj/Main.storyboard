@@ -154,6 +154,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LogOut:" destination="fhu-N4-ErK" eventType="touchUpInside" id="S6V-zG-rgN"/>
+                                    <segue destination="H34-dy-6Wm" kind="unwind" unwindAction="unwindWithSegue:" id="Ju0-eG-H3q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxJ-na-xBJ">
@@ -162,6 +163,10 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Back:" destination="fhu-N4-ErK" eventType="touchUpInside" id="arM-ab-Xlg"/>
+                                    <segue destination="H34-dy-6Wm" kind="unwind" unwindAction="unwindWithSegue:" id="p3Q-Zz-4ti"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -199,6 +204,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmy-ZX-OR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="H34-dy-6Wm" userLabel="Exit" sceneMemberID="exit"/>
                 <customObject id="skd-5j-Bap" customClass="HomeModuleInitializer" customModule="ImaguruClassWork" customModuleProvider="target">
                     <connections>
                         <outlet property="viewController" destination="D7h-61-dMu" id="4Ck-Lu-xZa"/>

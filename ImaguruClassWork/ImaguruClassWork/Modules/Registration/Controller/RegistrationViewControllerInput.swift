@@ -6,4 +6,6 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol RegistrationViewControllerInput: class {}
+protocol RegistrationViewControllerInput: class {
+    func set(_ data: RegistrationData)
+}
