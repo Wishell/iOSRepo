@@ -11,6 +11,7 @@ import Foundation
 enum RegistrationError : Error{
     case shortPassword(Int)
     case shortNickname(Int)
+    case incorrectEmail
 }
 
 extension RegistrationError: LocalizedError{
@@ -20,6 +21,8 @@ extension RegistrationError: LocalizedError{
             return "Paswort must have at least \(count) symbols"
         case .shortNickname(let count):
         return "Nickname must have at least \(count) symbols"
+        case .incorrectEmail:
+            return "Email is incorrect"
         }
     }
 }
@@ -39,6 +42,11 @@ final class RegistrationModel: RegistrationModelInput {
             output.signUpDidFail(RegistrationError.shortNickname(minNicknameLength))
             return
         }
+        guard EmailValidator.isEmailValid(data.email) else {
+            output.signUpDidFail(RegistrationError.incorrectEmail)
+            return
+        }
+        
         //Cell API
         output.signUpDidSucces()
     }

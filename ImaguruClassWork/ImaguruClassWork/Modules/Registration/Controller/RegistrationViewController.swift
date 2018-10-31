@@ -15,7 +15,6 @@ final class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.configure(available: self.model.data.isAllFieldSet)
         contentView.textChange = { [unowned self] (text, index) in
             self.model.data[index] = text
             self.contentView.configure(available: self.model.data.isAllFieldSet)
@@ -25,6 +24,12 @@ final class RegistrationViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentView.configure(available: self.model.data.isAllFieldSet)
+        contentView.display(model.data)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // i have a question here abount what type sender
         if segue.identifier == "goHome" {
             let controller = segue.destination as! HomeViewControllerInput
@@ -32,7 +37,6 @@ final class RegistrationViewController: UIViewController {
             controller.set(sendedData)
         }
     }
-    
     
     @IBAction func unwind(segue: UIStoryboardSegue) {}
 }

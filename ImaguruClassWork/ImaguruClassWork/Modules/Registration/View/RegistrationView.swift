@@ -49,11 +49,16 @@ extension RegistrationView: RegistrationViewInput {
 
 extension RegistrationView : UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textChange?(textField.text ?? "", textField.tag)
+//        textChange?(textField.text ?? "", textField.tag)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        textChange?(textField.text ?? "", textField.tag) // here we must change logic to set all characters
         return true
     }
 }

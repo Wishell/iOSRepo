@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -154,7 +155,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LogOut:" destination="fhu-N4-ErK" eventType="touchUpInside" id="S6V-zG-rgN"/>
-                                    <segue destination="H34-dy-6Wm" kind="unwind" unwindAction="unwindWithSegue:" id="Ju0-eG-H3q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxJ-na-xBJ">
@@ -165,7 +165,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Back:" destination="fhu-N4-ErK" eventType="touchUpInside" id="arM-ab-Xlg"/>
-                                    <segue destination="H34-dy-6Wm" kind="unwind" unwindAction="unwindWithSegue:" id="p3Q-Zz-4ti"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -195,13 +194,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Ad-vc-A6Y"/>
                         <connections>
-                            <outlet property="back" destination="BxJ-na-xBJ" id="4XA-2v-7a1"/>
                             <outlet property="email" destination="amY-bV-vKr" id="ZyK-7w-1et"/>
-                            <outlet property="logOut" destination="Yke-t8-62e" id="DlE-on-rpW"/>
                             <outlet property="nickname" destination="gTd-Ac-NyQ" id="cDB-82-Slv"/>
                             <outlet property="password" destination="aTy-96-XJQ" id="oYZ-kS-pM9"/>
                         </connections>
                     </view>
+                    <connections>
+                        <segue destination="H34-dy-6Wm" kind="unwind" identifier="unwind" unwindAction="unwindWithSegue:" id="SGc-xP-KZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmy-ZX-OR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="H34-dy-6Wm" userLabel="Exit" sceneMemberID="exit"/>

@@ -14,10 +14,11 @@ final class HomeModel: HomeModelInput {
     
     func logOut(){
         data = RegistrationData()
+        output.modelDidLogOut()
     }
     
     func back() {
-        
+        output.modelDidBack()
     }
     
 }

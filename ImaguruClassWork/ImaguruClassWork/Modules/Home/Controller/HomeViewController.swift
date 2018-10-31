@@ -15,7 +15,6 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.display(model.data)
         contentView.logOutAction = {
             let alert = UIAlertController(title: "Ahtung", message: "Really? You want to log out???", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [unowned self] (alert: UIAlertAction) in
@@ -24,27 +23,29 @@ final class HomeViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        
         contentView.backAction = {
-            
+            self.model.back()
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+                contentView.display(model.data)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! RegistrationViewControllerInput
         controller.set(model.data)
     }
-
 }
 
 // MARK: - HomeModelOutput
 extension HomeViewController: HomeModelOutput {
     func modelDidLogOut() {
-     //   performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+     performSegue(withIdentifier: "unwind", sender: nil)
     }
     func modelDidBack() {
-        
+        performSegue(withIdentifier: "unwind", sender: nil)
     }
 }
 
