@@ -56,9 +56,13 @@ extension RegistrationView : UITextFieldDelegate{
         endEditing(true)
         return true
     }
-    
+    //FAIL - Bad logic here
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        textChange?(textField.text ?? "", textField.tag) // here we must change logic to set all characters
+        guard var text = textField.text else {
+            textChange?("", textField.tag)
+            return false}
+        text += string
+        textChange?(text, textField.tag) 
         return true
     }
 }
