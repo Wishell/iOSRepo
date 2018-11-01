@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Second controller"
         contentView.logOutAction = {
             let alert = UIAlertController(title: "Ahtung", message: "Really? You want to log out???", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [unowned self] (alert: UIAlertAction) in
@@ -26,12 +27,21 @@ final class HomeViewController: UIViewController {
         contentView.backAction = {
             self.model.back()
         }
+        
+        contentView.closeAction = {[unowned self] in
+                self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
                 contentView.display(model.data)
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        print ("navigation controller \(navigationController?.viewControllers.count)")
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! RegistrationViewControllerInput

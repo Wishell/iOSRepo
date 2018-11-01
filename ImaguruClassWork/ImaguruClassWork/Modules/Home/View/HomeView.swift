@@ -12,6 +12,7 @@ protocol HomeViewInput: class {
     func display(_ data: RegistrationData)
     var logOutAction: (()->Void)? {get set}
     var backAction: (()->Void)? {get set}
+    var closeAction: (()->Void)? {get set}
 }
 
 final class HomeView: UIView {
@@ -24,12 +25,15 @@ final class HomeView: UIView {
     
     var logOutAction: (()->Void)?
     var backAction: (()->Void)?
-    
+    var closeAction: (()->Void)?
     @IBAction func LogOut(_ sender: Any) {
         logOutAction?()
     }
     @IBAction func Back(_ sender: Any) {
         backAction?()
+    }
+    @IBAction func stopAction(_ sender: Any) {
+        closeAction?()
     }
 }
 
