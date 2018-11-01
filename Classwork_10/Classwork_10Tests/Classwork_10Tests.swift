@@ -1,15 +1,15 @@
 //
-//  Hw_firstTests.swift
-//  Hw_firstTests
+//  Classwork_10Tests.swift
+//  Classwork_10Tests
 //
-//  Created by Wishell on 23.10.2018.
+//  Created by Wishell on 01.11.2018.
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
 import XCTest
-@testable import Hw_first
+@testable import Classwork_10
 
-class Hw_firstTests: XCTestCase {
+class Classwork_10Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
