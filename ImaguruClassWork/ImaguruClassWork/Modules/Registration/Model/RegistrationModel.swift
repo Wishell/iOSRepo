@@ -47,6 +47,11 @@ final class RegistrationModel: RegistrationModelInput {
             return
         }
         
+        let defaults = UserDefaults.standard
+        defaults.set(data.nickname, forKey: UserDefaultsEnum.nickname.value)
+        defaults.set(data.email, forKey: UserDefaultsEnum.email.value)
+        defaults.set(data.password, forKey: UserDefaultsEnum.password.value)
+        
         //Cell API
         output.signUpDidSucces()
     }

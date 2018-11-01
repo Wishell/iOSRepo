@@ -31,6 +31,7 @@
 		4812549621876C86006D014C /* RegistrationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4812548E21876C86006D014C /* RegistrationModuleConfigurator.swift */; };
 		481254A221877B33006D014C /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A121877B33006D014C /* RegistrationData.swift */; };
 		481254A4218A4F10006D014C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A3218A4F10006D014C /* EmailValidator.swift */; };
+		481254A6218B0964006D014C /* UserSefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A5218B0964006D014C /* UserSefaultsEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		4812548E21876C86006D014C /* RegistrationModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModuleConfigurator.swift; sourceTree = "<group>"; };
 		481254A121877B33006D014C /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		481254A3218A4F10006D014C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		481254A5218B0964006D014C /* UserSefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSefaultsEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				4812548D21876C86006D014C /* RegistrationModelInput.swift */,
 				481254A121877B33006D014C /* RegistrationData.swift */,
 				481254A3218A4F10006D014C /* EmailValidator.swift */,
+				481254A5218B0964006D014C /* UserSefaultsEnum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				4812548621876C72006D014C /* HomeModuleConfigurator.swift in Sources */,
 				481254A221877B33006D014C /* RegistrationData.swift in Sources */,
 				4812548521876C72006D014C /* HomeModelInput.swift in Sources */,
+				481254A6218B0964006D014C /* UserSefaultsEnum.swift in Sources */,
 				4812549521876C86006D014C /* RegistrationModelInput.swift in Sources */,
 				4812549321876C86006D014C /* RegistrationView.swift in Sources */,
 				4812548021876C72006D014C /* HomeViewControllerInput.swift in Sources */,

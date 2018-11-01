@@ -48,21 +48,17 @@ extension RegistrationView: RegistrationViewInput {
 }
 
 extension RegistrationView : UITextFieldDelegate{
-    func textFieldDidEndEditing(_ textField: UITextField) {
-//        textChange?(textField.text ?? "", textField.tag)
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)
         return true
     }
-    //FAIL - Bad logic here
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard var text = textField.text else {
             textChange?("", textField.tag)
             return false}
-        text += string
-        textChange?(text, textField.tag) 
+        let textRange = Range(range, in: text)
+        let updateText = text.replacingCharacters(in: textRange!, with: string)
+        textChange?(updateText, textField.tag)
         return true
     }
 }
