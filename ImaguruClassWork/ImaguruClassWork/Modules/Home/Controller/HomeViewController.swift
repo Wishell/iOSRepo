@@ -28,9 +28,9 @@ final class HomeViewController: UIViewController {
             self.model.back()
         }
         
-        contentView.closeAction = {[unowned self] in
-                self.navigationController?.popViewController(animated: true)
-        }
+//        contentView.feedAction = {[unowned self] in
+//                //self.navigationController?.pushViewController(FeedViewController, animated:true)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,8 +44,10 @@ final class HomeViewController: UIViewController {
 //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwind" {
         let controller = segue.destination as! RegistrationViewControllerInput
         controller.set(model.data)
+        }
     }
 }
 

@@ -32,6 +32,16 @@
 		481254A221877B33006D014C /* RegistrationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A121877B33006D014C /* RegistrationData.swift */; };
 		481254A4218A4F10006D014C /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A3218A4F10006D014C /* EmailValidator.swift */; };
 		481254A6218B0964006D014C /* UserSefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254A5218B0964006D014C /* UserSefaultsEnum.swift */; };
+		481254EA218B9672006D014C /* FeedModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E2218B9672006D014C /* FeedModelOutput.swift */; };
+		481254EB218B9672006D014C /* FeedViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E3218B9672006D014C /* FeedViewControllerInput.swift */; };
+		481254EC218B9672006D014C /* FeedModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E4218B9672006D014C /* FeedModuleInitializer.swift */; };
+		481254ED218B9672006D014C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E5218B9672006D014C /* FeedViewController.swift */; };
+		481254EE218B9672006D014C /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E6218B9672006D014C /* FeedView.swift */; };
+		481254EF218B9672006D014C /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E7218B9672006D014C /* FeedModel.swift */; };
+		481254F0218B9672006D014C /* FeedModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E8218B9672006D014C /* FeedModelInput.swift */; };
+		481254F1218B9672006D014C /* FeedModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254E9218B9672006D014C /* FeedModuleConfigurator.swift */; };
+		481254F7218BA018006D014C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254F6218BA018006D014C /* Article.swift */; };
+		481254F9218BA072006D014C /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481254F8218BA072006D014C /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +93,16 @@
 		481254A121877B33006D014C /* RegistrationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationData.swift; sourceTree = "<group>"; };
 		481254A3218A4F10006D014C /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		481254A5218B0964006D014C /* UserSefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSefaultsEnum.swift; sourceTree = "<group>"; };
+		481254E2218B9672006D014C /* FeedModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModelOutput.swift; sourceTree = "<group>"; };
+		481254E3218B9672006D014C /* FeedViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerInput.swift; sourceTree = "<group>"; };
+		481254E4218B9672006D014C /* FeedModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModuleInitializer.swift; sourceTree = "<group>"; };
+		481254E5218B9672006D014C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		481254E6218B9672006D014C /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		481254E7218B9672006D014C /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		481254E8218B9672006D014C /* FeedModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModelInput.swift; sourceTree = "<group>"; };
+		481254E9218B9672006D014C /* FeedModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModuleConfigurator.swift; sourceTree = "<group>"; };
+		481254F6218BA018006D014C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		481254F8218BA072006D014C /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +184,7 @@
 		4812546421876853006D014C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				481254E1218B9657006D014C /* Feed */,
 				4812547621876C49006D014C /* Home */,
 				4812547521876C3F006D014C /* Registration */,
 			);
@@ -263,6 +284,55 @@
 			children = (
 				4812548921876C86006D014C /* RegistrationModuleInitializer.swift */,
 				4812548E21876C86006D014C /* RegistrationModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		481254E1218B9657006D014C /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				481254F2218B967E006D014C /* Model */,
+				481254F3218B9688006D014C /* View */,
+				481254F4218B9693006D014C /* Controller */,
+				481254F5218B96AF006D014C /* Configurator */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		481254F2218B967E006D014C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				481254E2218B9672006D014C /* FeedModelOutput.swift */,
+				481254E7218B9672006D014C /* FeedModel.swift */,
+				481254E8218B9672006D014C /* FeedModelInput.swift */,
+				481254F6218BA018006D014C /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		481254F3218B9688006D014C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				481254E6218B9672006D014C /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		481254F4218B9693006D014C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				481254E3218B9672006D014C /* FeedViewControllerInput.swift */,
+				481254E5218B9672006D014C /* FeedViewController.swift */,
+				481254F8218BA072006D014C /* DataSource.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		481254F5218B96AF006D014C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				481254E4218B9672006D014C /* FeedModuleInitializer.swift */,
+				481254E9218B9672006D014C /* FeedModuleConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -398,25 +468,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481254F0218B9672006D014C /* FeedModelInput.swift in Sources */,
 				4812548221876C72006D014C /* HomeViewController.swift in Sources */,
 				4812548621876C72006D014C /* HomeModuleConfigurator.swift in Sources */,
 				481254A221877B33006D014C /* RegistrationData.swift in Sources */,
+				481254EB218B9672006D014C /* FeedViewControllerInput.swift in Sources */,
 				4812548521876C72006D014C /* HomeModelInput.swift in Sources */,
 				481254A6218B0964006D014C /* UserSefaultsEnum.swift in Sources */,
 				4812549521876C86006D014C /* RegistrationModelInput.swift in Sources */,
 				4812549321876C86006D014C /* RegistrationView.swift in Sources */,
 				4812548021876C72006D014C /* HomeViewControllerInput.swift in Sources */,
 				4812549221876C86006D014C /* RegistrationViewController.swift in Sources */,
+				481254EE218B9672006D014C /* FeedView.swift in Sources */,
 				4812549021876C86006D014C /* RegistrationViewControllerInput.swift in Sources */,
 				4812549621876C86006D014C /* RegistrationModuleConfigurator.swift in Sources */,
+				481254F7218BA018006D014C /* Article.swift in Sources */,
 				4812548121876C72006D014C /* HomeModuleInitializer.swift in Sources */,
 				4812548F21876C86006D014C /* RegistrationModelOutput.swift in Sources */,
 				4812549121876C86006D014C /* RegistrationModuleInitializer.swift in Sources */,
+				481254F9218BA072006D014C /* DataSource.swift in Sources */,
 				4812548421876C72006D014C /* HomeModel.swift in Sources */,
 				4812548321876C72006D014C /* HomeView.swift in Sources */,
 				481254A4218A4F10006D014C /* EmailValidator.swift in Sources */,
+				481254EC218B9672006D014C /* FeedModuleInitializer.swift in Sources */,
+				481254EA218B9672006D014C /* FeedModelOutput.swift in Sources */,
+				481254EF218B9672006D014C /* FeedModel.swift in Sources */,
 				481254372187681B006D014C /* AppDelegate.swift in Sources */,
+				481254F1218B9672006D014C /* FeedModuleConfigurator.swift in Sources */,
 				4812547F21876C72006D014C /* HomeModelOutput.swift in Sources */,
+				481254ED218B9672006D014C /* FeedViewController.swift in Sources */,
 				4812549421876C86006D014C /* RegistrationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
