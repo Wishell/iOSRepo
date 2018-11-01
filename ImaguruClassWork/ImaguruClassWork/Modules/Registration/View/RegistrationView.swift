@@ -53,7 +53,7 @@ extension RegistrationView : UITextFieldDelegate{
         return true
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard var text = textField.text else {
+        guard let text = textField.text else {
             textChange?("", textField.tag)
             return false}
         let textRange = Range(range, in: text)
