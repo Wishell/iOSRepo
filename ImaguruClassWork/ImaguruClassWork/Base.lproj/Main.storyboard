@@ -263,7 +263,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="DSN-y9-Fcw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="FXj-m0-7WO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="FXj-m0-7WO">
+                            <connections>
+                                <action selector="onExitTap:" destination="r7Y-i4-jU2" id="EeP-pK-1sl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXj-z9-cJt" userLabel="First Responder" sceneMemberID="firstResponder"/>

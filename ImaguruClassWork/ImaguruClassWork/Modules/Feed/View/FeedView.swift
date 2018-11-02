@@ -14,6 +14,7 @@ protocol FeedViewInput: class {
     func display(_ items: [Article])
     var tableDataSource : (()->DataSource)? {get set}
     var onTableItemTap: ((Article)->Void)? { get set }
+    var onExitTapAction: (()->Void)? { get set }
 }
 
 final class FeedView: UIView {
@@ -21,6 +22,10 @@ final class FeedView: UIView {
     var registrateTable: ((UITableView)->Void)?
     var tableDataSource : (()->DataSource)?
     var onTableItemTap: ((Article)->Void)?
+    var onExitTapAction: (()->Void)?
+    @IBAction func onExitTap(_ sender: Any) {
+        onExitTapAction?()
+    }
 }
 
 // MARK: - FeedViewInput

@@ -27,6 +27,9 @@ final class FeedViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        contentView.onExitTapAction={
+            self.navigationController?.popToRootViewController(animated:true)
+        }
         contentView.prepareTable()
     }
 }
