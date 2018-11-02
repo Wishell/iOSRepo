@@ -6,4 +6,6 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol FeedViewControllerInput: class {}
+protocol FeedViewControllerInput: class {
+    func setData(_ data: RegistrationData?)
+}

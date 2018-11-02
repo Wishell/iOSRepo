@@ -27,10 +27,6 @@ final class HomeViewController: UIViewController {
         contentView.backAction = {
             self.model.back()
         }
-        
-//        contentView.feedAction = {[unowned self] in
-//                //self.navigationController?.pushViewController(FeedViewController, animated:true)
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,16 +34,16 @@ final class HomeViewController: UIViewController {
                 contentView.display(model.data)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        print ("navigation controller \(navigationController?.viewControllers.count)")
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwind" {
         let controller = segue.destination as! RegistrationViewControllerInput
         controller.set(model.data)
         }
+        if segue.identifier == "feedSegue"  {
+            let controller = segue.destination as! FeedViewControllerInput
+            controller.setData(model.data)
+        }
+        
     }
 }
 
