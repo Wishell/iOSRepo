@@ -11,7 +11,7 @@ import UIKit
 protocol FeedViewInput: class {
     var registrateTable: ((UITableView)->Void)? {get set}
     func prepareTable()
-    func display(_ items: [Article])
+
     var tableDataSource : (()->DataSource)? {get set}
     var onTableItemTap: ((Article)->Void)? { get set }
     var onExitTapAction: (()->Void)? { get set }
@@ -30,9 +30,6 @@ final class FeedView: UIView {
 
 // MARK: - FeedViewInput
 extension FeedView: FeedViewInput {
-    func display(_ items: [Article]) {
-        
-    }
     func prepareTable() {
         tableView.delegate = self
         registrateTable?(tableView)

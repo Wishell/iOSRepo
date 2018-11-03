@@ -12,11 +12,10 @@ final class FeedViewController: UIViewController {
     
     var model: FeedModelInput!
     lazy var contentView: FeedViewInput = { return view as! FeedViewInput }()
-    //private let dataSource = DataSource()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // dataSource.items = [Article(title: "first", text: "first text"), Article(title: "second", text: "second text")]
         contentView.registrateTable = { [unowned self] (tableView) in
             tableView.dataSource = self.model.dataSource
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
