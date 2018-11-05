@@ -12,15 +12,15 @@ final class FeedViewController: UIViewController {
     
     var model: FeedModelInput!
     lazy var contentView: FeedViewInput = { return view as! FeedViewInput }()
-
+    lazy var dataSource: DataSource? = DataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.registrateTable = { [unowned self] (tableView) in
-            tableView.dataSource = self.model.dataSource
+            tableView.dataSource = self.dataSource
             tableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
         }
-        contentView.tableDataSource = {[unowned self] in return self.model.dataSource}
+        contentView.tableDataSource = {[unowned self] in return self.dataSource!}
         contentView.onTableItemTap = {[unowned self] (item) in
             let alert = UIAlertController(title: item.title, message: item.text, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
@@ -33,7 +33,11 @@ final class FeedViewController: UIViewController {
     }
 }
 // MARK: - FeedModelOutput
-extension FeedViewController: FeedModelOutput {}
+extension FeedViewController: FeedModelOutput {
+    func modelDidLoad() {
+        dataSource?.items = model.data
+    }
+}
 
 // MARK: - FeedViewControllerInput
 extension FeedViewController: FeedViewControllerInput {

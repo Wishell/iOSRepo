@@ -10,11 +10,13 @@ import Foundation
 
 final class FeedModel: FeedModelInput {
     weak var output: FeedModelOutput!
-    var dataSource: DataSource! = DataSource()
+    var data: [Article] = []
+    
     func load(data: RegistrationData) {
-        dataSource.items.append(Article(title: "nickname", text: data.nickname))
-        dataSource.items.append(Article(title: "email", text: data.email))
-        dataSource.items.append(Article(title: "password", text: data.password))
+        self.data.append(Article(title: "nickname", text: data.nickname))
+        self.data.append(Article(title: "email", text: data.email))
+        self.data.append(Article(title: "password", text: data.password))
+        output.modelDidLoad()
     }
 
 }

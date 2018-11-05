@@ -6,4 +6,6 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol FeedModelOutput: class {}
+protocol FeedModelOutput: class {
+    func modelDidLoad()
+}
