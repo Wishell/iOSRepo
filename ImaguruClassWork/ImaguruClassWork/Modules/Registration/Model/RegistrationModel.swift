@@ -1,4 +1,4 @@
-//  
+//
 //  RegistrationModel.swift
 //  ImaguruClassWork
 //
@@ -8,19 +8,19 @@
 
 import Foundation
 
-enum RegistrationError : Error{
+enum RegistrationError: Error {
     case shortPassword(Int)
     case shortNickname(Int)
     case incorrectEmail
 }
 
-extension RegistrationError: LocalizedError{
-    var errorDescription: String?{
+extension RegistrationError: LocalizedError {
+    var errorDescription: String? {
         switch self {
         case .shortPassword(let count):
             return "Paswort must have at least \(count) symbols"
         case .shortNickname(let count):
-        return "Nickname must have at least \(count) symbols"
+            return "Nickname must have at least \(count) symbols"
         case .incorrectEmail:
             return "Email is incorrect"
         }
@@ -32,7 +32,7 @@ final class RegistrationModel: RegistrationModelInput {
     var data: RegistrationData = RegistrationData()
     private let minNicknameLength = 3
     private let minPasswordLength = 6
-    
+
     func signUp() {
         guard data.password.count >= minPasswordLength else {
             output.signUpDidFail(RegistrationError.shortPassword(minPasswordLength))
@@ -46,14 +46,21 @@ final class RegistrationModel: RegistrationModelInput {
             output.signUpDidFail(RegistrationError.incorrectEmail)
             return
         }
-        
+
         let defaults = UserDefaults.standard
         defaults.set(data.nickname, forKey: UserDefaultsEnum.nickname.value)
         defaults.set(data.email, forKey: UserDefaultsEnum.email.value)
         defaults.set(data.password, forKey: UserDefaultsEnum.password.value)
-        
-        //Cell API
+
         output.signUpDidSucces()
     }
-    
+
+    func setFromDefaults() {
+        let defaults = UserDefaults.standard
+        data.nickname = defaults.string(forKey: UserDefaultsEnum.nickname.value) ?? ""
+        data.email = defaults.string(forKey: UserDefaultsEnum.email.value) ?? ""
+        data.password = defaults.string(forKey: UserDefaultsEnum.password.value) ?? ""
+        output.signUpDidSucces()
+    }
+
 }

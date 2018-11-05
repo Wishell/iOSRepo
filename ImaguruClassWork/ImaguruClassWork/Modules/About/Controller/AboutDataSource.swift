@@ -14,11 +14,11 @@ final class AboutDataSource: NSObject {
 
 // MARK: - UICollectionViewDataSource
 extension AboutDataSource: UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = items[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "aboutCell", for: indexPath) as? AboutCell else {
@@ -27,5 +27,5 @@ extension AboutDataSource: UICollectionViewDataSource {
         cell.display(item)
         return cell
     }
-    
+
 }

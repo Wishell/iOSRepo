@@ -1,4 +1,4 @@
-//  
+//
 //  AboutView.swift
 //  ImaguruClassWork
 //
@@ -15,21 +15,21 @@ protocol AboutViewInput: class {
 }
 
 final class AboutView: UIView {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     var registerCollectionView: ((UICollectionView) -> Void)?
-    
+
 }
 
 // MARK: - AboutViewInput
 extension AboutView: AboutViewInput {
-    
-    func prepareView(){
+
+    func prepareView() {
         registerCollectionView?(collectionView)
     }
-    
+
     func reload() {
         collectionView.reloadData()
     }
-    
+
 }

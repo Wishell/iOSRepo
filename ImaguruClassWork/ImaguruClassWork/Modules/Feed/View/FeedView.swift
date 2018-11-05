@@ -1,4 +1,4 @@
-//  
+//
 //  FeedView.swift
 //  ImaguruClassWork
 //
@@ -9,20 +9,20 @@
 import UIKit
 
 protocol FeedViewInput: class {
-    var registrateTable: ((UITableView)->Void)? {get set}
+    var registrateTable: ((UITableView) -> Void)? { get set }
     func prepareTable()
 
-    var tableDataSource : (()->DataSource)? {get set}
-    var onTableItemTap: ((Article)->Void)? { get set }
-    var onExitTapAction: (()->Void)? { get set }
+    var tableDataSource: (() -> DataSource)? { get set }
+    var onTableItemTap: ((Article) -> Void)? { get set }
+    var onExitTapAction: (() -> Void)? { get set }
 }
 
 final class FeedView: UIView {
     @IBOutlet weak var tableView: UITableView!
-    var registrateTable: ((UITableView)->Void)?
-    var tableDataSource : (()->DataSource)?
-    var onTableItemTap: ((Article)->Void)?
-    var onExitTapAction: (()->Void)?
+    var registrateTable: ((UITableView) -> Void)?
+    var tableDataSource: (() -> DataSource)?
+    var onTableItemTap: ((Article) -> Void)?
+    var onExitTapAction: (() -> Void)?
     @IBAction func onExitTap(_ sender: Any) {
         onExitTapAction?()
     }
@@ -35,13 +35,11 @@ extension FeedView: FeedViewInput {
         registrateTable?(tableView)
     }
 }
-
+// MARK: - UITableViewDelegate
 extension FeedView: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = tableDataSource?().items[indexPath.row]
-        onTableItemTap?(item ?? Article(title: "",text: ""))
+        onTableItemTap?(item ?? Article(title: "", text: ""))
     }
-    
 }

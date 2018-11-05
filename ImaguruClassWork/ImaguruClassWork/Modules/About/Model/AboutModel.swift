@@ -1,4 +1,4 @@
-//  
+//
 //  AboutModel.swift
 //  ImaguruClassWork
 //
@@ -9,10 +9,10 @@
 import Foundation
 
 final class AboutModel: AboutModelInput {
-    
+
     weak var output: AboutModelOutput!
     var data: [AboutData] = []
-    
+
     func load () {
         var item = AboutData()
         item.author = "Anton Vishneuski"
@@ -20,7 +20,7 @@ final class AboutModel: AboutModelInput {
         item.version = 1.0
         item.image = "image"
         data = [item]
-        
+
         output.modelDidLoad()
     }
 }

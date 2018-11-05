@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImaguruClassWork/Modules/Registration/View/RegistrationView.swift"
-            timestampString = "562866834.807547"
+            timestampString = "563140846.360963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
-            landmarkType = "7">
+            startingLineNumber = "65"
+            endingLineNumber = "65">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,7 +24,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImaguruClassWork/Modules/Feed/Controller/FeedViewController.swift"
-            timestampString = "563121862.5169801"
+            timestampString = "563127601.9579819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -42,7 +40,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImaguruClassWork/Modules/Feed/Model/FeedModel.swift"
-            timestampString = "562977657.585652"
+            timestampString = "563140846.361114"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -57,102 +55,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ImaguruClassWork/Modules/About/View/AboutView.swift"
-            timestampString = "563121862.517549"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "prepareView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImaguruClassWork/Modules/About/View/AboutCell.swift"
-            timestampString = "563121862.517893"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "AboutCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ImaguruClassWork.AboutCell.author.getter : weak Swift.Optional&lt;__C.UILabel&gt;"
-                  moduleName = "ImaguruClassWork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wishell/iOSFramework/ImaguruClassWork/ImaguruClassWork/Modules/About/View/AboutCell.swift"
-                  timestampString = "563121556.912701"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ImaguruClassWork.AboutCell.author.setter : weak Swift.Optional&lt;__C.UILabel&gt;"
-                  moduleName = "ImaguruClassWork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wishell/iOSFramework/ImaguruClassWork/ImaguruClassWork/Modules/About/View/AboutCell.swift"
-                  timestampString = "563121556.91773"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ImaguruClassWork.AboutCell.init(frame: __C.CGRect) -&gt; ImaguruClassWork.AboutCell"
-                  moduleName = "ImaguruClassWork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wishell/iOSFramework/ImaguruClassWork/ImaguruClassWork/Modules/About/View/AboutCell.swift"
-                  timestampString = "563121556.920228"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "43">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ImaguruClassWork.AboutCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ImaguruClassWork.AboutCell&gt;"
-                  moduleName = "ImaguruClassWork"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wishell/iOSFramework/ImaguruClassWork/ImaguruClassWork/Modules/About/View/AboutCell.swift"
-                  timestampString = "563121556.922455"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "50">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ImaguruClassWork/Modules/About/Controller/AboutViewController.swift"
-            timestampString = "563121862.518182"
+            timestampString = "563140846.3611799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -164,27 +68,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImaguruClassWork/Modules/Registration/Controller/RegistrationViewController.swift"
-            timestampString = "563121862.51847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImaguruClassWork/Modules/About/Controller/AboutDataSource.swift"
-            timestampString = "563121862.518749"
+            timestampString = "563140846.36124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"

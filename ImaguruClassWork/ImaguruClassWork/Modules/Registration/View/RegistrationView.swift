@@ -46,7 +46,7 @@ extension RegistrationView: RegistrationViewInput {
     }
     
 }
-
+//MARK - UITextFieldDelegate
 extension RegistrationView : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)

@@ -7,6 +7,6 @@
 //
 
 protocol FeedModelInput {
-    var dataSource: DataSource! {get set}
+    var dataSource: DataSource! { get set }
     func load(data: RegistrationData)
 }

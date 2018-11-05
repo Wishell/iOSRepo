@@ -8,5 +8,6 @@
 
 protocol RegistrationModelInput {
     var data: RegistrationData {get set}
+    func setFromDefaults() 
     func signUp ()
 }

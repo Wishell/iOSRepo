@@ -1,4 +1,4 @@
-//  
+//
 //  AboutModelInput.swift
 //  ImaguruClassWork
 //
