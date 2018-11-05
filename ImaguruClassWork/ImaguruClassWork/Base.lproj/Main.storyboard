@@ -108,10 +108,10 @@
                                             <constraint firstItem="Tea-RQ-ksw" firstAttribute="centerX" secondItem="zqs-IS-DbZ" secondAttribute="centerX" id="xpE-E0-Oa3"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="authorLabel" destination="kBe-lq-B21" id="Hf6-4f-KgI"/>
-                                            <outlet property="contactLabel" destination="blw-Wc-hhf" id="5VX-SX-hMJ"/>
-                                            <outlet property="image" destination="FxE-Jd-B2R" id="0g5-E2-MBp"/>
-                                            <outlet property="versionLabel" destination="coB-7T-mTI" id="key-7H-OGd"/>
+                                            <outlet property="author" destination="kBe-lq-B21" id="k0X-N2-EgR"/>
+                                            <outlet property="contact" destination="blw-Wc-hhf" id="Ues-Uu-XR6"/>
+                                            <outlet property="image" destination="FxE-Jd-B2R" id="CDf-JV-t4y"/>
+                                            <outlet property="version" destination="coB-7T-mTI" id="t53-xO-NfA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -150,8 +150,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ch9-Uq-khh" kind="relationship" relationship="viewControllers" id="AYF-Am-pGN"/>
-                        <segue destination="3v9-4e-Bi9" kind="relationship" relationship="viewControllers" id="SFb-d1-DJr"/>
+                        <segue destination="3v9-4e-Bi9" kind="relationship" relationship="viewControllers" id="j2t-p6-igC"/>
+                        <segue destination="ch9-Uq-khh" kind="relationship" relationship="viewControllers" id="ufq-hS-2mF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJv-Bp-iPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,6 +397,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nR7-yQ-uJk">
                                 <rect key="frame" x="0.0" y="2.5" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

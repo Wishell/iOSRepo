@@ -10,21 +10,26 @@ import UIKit
 
 protocol AboutViewInput: class {
     func prepareView()
-    var registerCollectionView: ((UICollectionView)->Void)? {get set}
+    var registerCollectionView: ((UICollectionView) -> Void)? { get set }
+    func reload()
 }
 
 final class AboutView: UIView {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    var registerCollectionView: ((UICollectionView)->Void)?
-    //var aboutCell: AboutCell = AboutCell()
+    var registerCollectionView: ((UICollectionView) -> Void)?
     
 }
 
 // MARK: - AboutViewInput
 extension AboutView: AboutViewInput {
+    
     func prepareView(){
         registerCollectionView?(collectionView)
     }
+    
+    func reload() {
+        collectionView.reloadData()
+    }
+    
 }

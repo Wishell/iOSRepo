@@ -12,21 +12,30 @@ final class AboutViewController: UIViewController {
     
     var model: AboutModelInput!
     lazy var contentView: AboutViewInput = { return view as! AboutViewInput }()
+    lazy var dataSource: AboutDataSource? = AboutDataSource()
+    
     override func viewDidLoad() {
-        super .viewDidLoad()
-        contentView.registerCollectionView = {[unowned self] (collectionView) in
-            collectionView.dataSource = self.model.dataSource
-            collectionView.register(AboutCell.self, forCellWithReuseIdentifier: "aboutCell")
-        }
-        model.load()
-        contentView.prepareView()
+        super.viewDidLoad()
         
+        contentView.registerCollectionView = { [unowned self] view in
+            view.dataSource = self.dataSource
+//            view.register(AboutCell.self, forCellWithReuseIdentifier: "aboutCell")
+        }
+        contentView.prepareView()
+        model.load()
     }
     
 }
 
 // MARK: - AboutModelOutput
-extension AboutViewController: AboutModelOutput {}
+extension AboutViewController: AboutModelOutput {
+    
+    func modelDidLoad() {
+        dataSource?.items = model.data
+        contentView.reload()
+    }
+    
+}
 
 // MARK: - AboutViewControllerInput
 extension AboutViewController: AboutViewControllerInput {}

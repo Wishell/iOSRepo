@@ -7,6 +7,6 @@
 //
 
 protocol AboutModelInput {
-    var dataSource: AboutDataSource? {get set}
+    var data: [AboutData] { get set }
     func load()
 }

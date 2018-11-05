@@ -11,12 +11,16 @@ import Foundation
 final class AboutModel: AboutModelInput {
     
     weak var output: AboutModelOutput!
-    var dataSource: AboutDataSource? = AboutDataSource()
+    var data: [AboutData] = []
+    
     func load () {
-        dataSource?.item.author = "Anton Vishneuski"
-        dataSource?.item.contact = "wishell@mail.ru"
-        dataSource?.item.version = 1.0
-        dataSource?.item.image = "image"
+        var item = AboutData()
+        item.author = "Anton Vishneuski"
+        item.contact = "wishell@mail.ru"
+        item.version = 1.0
+        item.image = "image"
+        data = [item]
         
+        output.modelDidLoad()
     }
 }

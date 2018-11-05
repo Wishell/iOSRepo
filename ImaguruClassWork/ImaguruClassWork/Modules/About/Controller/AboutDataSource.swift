@@ -8,21 +8,24 @@
 
 import UIKit
 
-class AboutDataSource: NSObject {
-    var item: AboutData = AboutData()
+final class AboutDataSource: NSObject {
+    var items: [AboutData] = []
 }
 
-
+// MARK: - UICollectionViewDataSource
 extension AboutDataSource: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "aboutCell", for: indexPath) as? AboutCell {
-            cell.cell = item
-            return cell
+        let item = items[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "aboutCell", for: indexPath) as? AboutCell else {
+            fatalError()
         }
-        return UICollectionViewCell()
+        cell.display(item)
+        return cell
     }
+    
 }

@@ -8,20 +8,29 @@
 
 import UIKit
 
-class AboutCell : UICollectionViewCell{
+final class AboutCell: UICollectionViewCell {
     
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var contactLabel: UILabel!
-    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var contact: UILabel!
+    @IBOutlet weak var version: UILabel!
     @IBOutlet weak var image: UIImageView!
     
-    var cell: AboutData? {
-        didSet {
-            authorLabel.text = cell?.author
-            contactLabel.text = cell?.contact
-            versionLabel.text = String((cell?.version)!)
-            image.image = UIImage(named: (cell?.image)!)
-        }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        version.text = nil
+        image.image = nil
+    }
+    
+}
+
+extension AboutCell {
+    
+    func display(_ data: AboutData) {
+        author.text = data.author
+        contact.text = data.contact
+        data.version.flatMap { version.text = String($0) }
+        data.image.flatMap { image.image = UIImage(named: $0) }
     }
     
 }
