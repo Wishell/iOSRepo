@@ -15,6 +15,11 @@ protocol RegistrationViewInput: class {
     func display(_ data: RegistrationData)
 }
 
+extension FloatingPoint {
+    var degreesToRadians: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
+}
+
 final class RegistrationView: UIView {
     
     
@@ -29,6 +34,41 @@ final class RegistrationView: UIView {
     // MARK: - Actions
     @IBAction func signUpDidTap(_ sender: Any) {
         action?()
+        rotate()
+    }
+    
+    func rotate(){
+//        UIView.animate(withDuration: 2.5, animations: { [weak self] in
+//            self?.nickname.transform = CGAffineTransform(rotationAngle: CGFloat(350).degreesToRadians )
+//        }) { (succsses) in
+//            self.nickname.transform = .identity
+//            print("Animation Complete")
+//        }
+        
+        UIView.animateKeyframes(withDuration: 0.3, delay: 1.0, options: [.autoreverse], animations: {
+//            [weak self] in
+//            self?.nickname.transform = CGAffineTransform(rotationAngle: CGFloat(180).degreesToRadians )
+//            .scaledBy(x: 2.0, y: 2.0)
+//            .translatedBy(x: 0, y: 400)
+//            .inverted()
+//            self?.nickname.alpha = 0.0
+            self.nickname.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }) { (succsses) in
+            self.nickname.alpha = 1.0
+            self.nickname.transform = .identity
+            print("Animation Complete")
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        print("frame \(frame)")
+        print("nickname frame \(nickname.frame)")
+        print("nickname center \(nickname.center)")
+        print("nickname size \(nickname.frame.size)")
+        print("center \(center)")
+        print("frame size \(frame.size)")
     }
     
 }
