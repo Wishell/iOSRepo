@@ -53,6 +53,7 @@
 		488EBC1E218E40C2006E9600 /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488EBC1D218E40C2006E9600 /* AboutData.swift */; };
 		488EBC20218E40D8006E9600 /* AboutDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488EBC1F218E40D8006E9600 /* AboutDataSource.swift */; };
 		488EBC22218E50A5006E9600 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488EBC21218E50A5006E9600 /* AboutCell.swift */; };
+		48F95CE72190E317003ABA44 /* DogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F95CE62190E317003ABA44 /* DogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		488EBC1D218E40C2006E9600 /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
 		488EBC1F218E40D8006E9600 /* AboutDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDataSource.swift; sourceTree = "<group>"; };
 		488EBC21218E50A5006E9600 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		48F95CE62190E317003ABA44 /* DogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				4812548B21876C86006D014C /* RegistrationView.swift */,
+				48F95CE62190E317003ABA44 /* DogView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				4812548621876C72006D014C /* HomeModuleConfigurator.swift in Sources */,
 				481254A221877B33006D014C /* RegistrationData.swift in Sources */,
 				481254EB218B9672006D014C /* FeedViewControllerInput.swift in Sources */,
+				48F95CE72190E317003ABA44 /* DogView.swift in Sources */,
 				4812548521876C72006D014C /* HomeModelInput.swift in Sources */,
 				481254A6218B0964006D014C /* UserSefaultsEnum.swift in Sources */,
 				4812549521876C86006D014C /* RegistrationModelInput.swift in Sources */,

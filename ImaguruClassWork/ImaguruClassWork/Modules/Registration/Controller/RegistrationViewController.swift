@@ -22,7 +22,7 @@ final class RegistrationViewController: UIViewController {
         contentView.action = { [unowned self] in
             self.model.signUp()
         }
-        model.setFromDefaults()
+       // model.setFromDefaults()
         
     }
     
