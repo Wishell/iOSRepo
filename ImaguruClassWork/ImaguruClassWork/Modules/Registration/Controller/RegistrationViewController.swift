@@ -22,6 +22,8 @@ final class RegistrationViewController: UIViewController {
         contentView.action = { [unowned self] in
             self.model.signUp()
         }
+        model.setFromDefaults()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -12,6 +12,7 @@ protocol HomeViewInput: class {
     func display(_ data: RegistrationData)
     var logOutAction: (()->Void)? {get set}
     var backAction: (()->Void)? {get set}
+    var feedAction: (()->Void)? {get set}
 }
 
 final class HomeView: UIView {
@@ -24,7 +25,7 @@ final class HomeView: UIView {
     
     var logOutAction: (()->Void)?
     var backAction: (()->Void)?
-    
+    var feedAction: (()->Void)?
     @IBAction func LogOut(_ sender: Any) {
         logOutAction?()
     }
@@ -41,3 +42,5 @@ extension HomeView: HomeViewInput {
         password.text = data.password
     }
 }
+
+

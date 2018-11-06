@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Second controller"
         contentView.logOutAction = {
             let alert = UIAlertController(title: "Ahtung", message: "Really? You want to log out???", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [unowned self] (alert: UIAlertAction) in
@@ -34,8 +35,15 @@ final class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwind" {
         let controller = segue.destination as! RegistrationViewControllerInput
         controller.set(model.data)
+        }
+        if segue.identifier == "feedSegue"  {
+            let controller = segue.destination as! FeedViewControllerInput
+            controller.setData(model.data)
+        }
+        
     }
 }
 
