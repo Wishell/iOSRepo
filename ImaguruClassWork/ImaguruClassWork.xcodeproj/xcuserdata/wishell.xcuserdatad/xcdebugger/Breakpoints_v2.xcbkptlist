@@ -10,7 +10,15 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ImaguruClassWork/Modules/Registration/View/RegistrationView.swift"
+<<<<<<< Updated upstream
             timestampString = "563148380.777038"
+=======
+<<<<<<< HEAD
+            timestampString = "563306055.331308"
+=======
+            timestampString = "563148380.777038"
+>>>>>>> 1b029dd... - created Dog UIView class
+>>>>>>> Stashed changes
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
