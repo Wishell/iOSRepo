@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ViewC: UIViewController {
     
     let repository = Repository(apiClient: APIClient())
 

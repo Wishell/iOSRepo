@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7xT-Qa-Bf7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RlL-Yf-hfP">
+            <objects>
+                <navigationController id="7xT-Qa-Bf7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VRV-gt-oBi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1c2-Fa-MIv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGP-RT-d3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1493" y="-99"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="FlightsAboutViewController" customModule="JsonCoddableUrlSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="FlightsAboutView" customModule="JsonCoddableUrlSession" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-Y9-8x9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="271"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vIo-Ax-7xc">
+                                    <size key="itemSize" width="375" height="271"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="383-GT-42Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="271"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="271"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Plain" translatesAutoresizingMaskIntoConstraints="NO" id="meH-hw-wxD">
+                                                    <rect key="frame" x="0.0" y="20" width="375" height="231"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.52640960940000003" green="0.74396851980000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="meH-hw-wxD" firstAttribute="centerY" secondItem="383-GT-42Q" secondAttribute="centerY" id="QnW-IS-WxS"/>
+                                            <constraint firstItem="meH-hw-wxD" firstAttribute="leading" secondItem="383-GT-42Q" secondAttribute="leading" id="Z2A-1C-YPQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="meH-hw-wxD" secondAttribute="trailing" id="hn6-tp-jXv"/>
+                                            <constraint firstItem="meH-hw-wxD" firstAttribute="top" secondItem="383-GT-42Q" secondAttribute="topMargin" id="tH2-7S-QbY"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjC-Ck-Xg1">
+                                <rect key="frame" x="60" y="366" width="255" height="60"/>
+                                <color key="backgroundColor" red="0.095068906920000001" green="0.72186893819999998" blue="0.89519137140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CjC-Ck-Xg1" secondAttribute="height" multiplier="17:4" id="FL4-vN-eBr"/>
+                                </constraints>
+                                <state key="normal" title="Get Flights">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnButtonTouch:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="OKF-cE-fpm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52640960941037118" green="0.74396851984602574" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CjC-Ck-Xg1" secondAttribute="trailing" constant="60" id="5I4-OT-Jwe"/>
+                            <constraint firstItem="CjC-Ck-Xg1" firstAttribute="top" secondItem="uo8-Y9-8x9" secondAttribute="bottom" constant="31" id="A2j-Om-SPP"/>
+                            <constraint firstItem="uo8-Y9-8x9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QEv-Mq-gCA"/>
+                            <constraint firstItem="CjC-Ck-Xg1" firstAttribute="centerX" secondItem="uo8-Y9-8x9" secondAttribute="centerX" id="TTT-7e-TXJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CjC-Ck-Xg1" secondAttribute="bottom" constant="241" id="W3P-Nt-Gej"/>
+                            <constraint firstItem="CjC-Ck-Xg1" firstAttribute="top" secondItem="uo8-Y9-8x9" secondAttribute="bottom" constant="31" id="kao-3b-HE6"/>
+                            <constraint firstItem="uo8-Y9-8x9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r8e-77-1UA"/>
+                            <constraint firstItem="CjC-Ck-Xg1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="tMY-Kx-nqw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="button" destination="CjC-Ck-Xg1" id="EeH-SV-U6S"/>
+                            <outlet property="image" destination="meH-hw-wxD" id="Gz1-6i-Ch5"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="K5X-Jh-Dcf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="VU3-q2-tVl" customClass="FlightsAboutModuleInitializer" customModule="JsonCoddableUrlSession" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="9TV-NM-a4w"/>
+                    </connections>
+                </customObject>
             </objects>
+            <point key="canvasLocation" x="-503.19999999999999" y="-99.400299850074973"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Plain" width="16" height="16"/>
+    </resources>
 </document>
