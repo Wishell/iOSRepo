@@ -70,11 +70,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2N6-UC-IWd" secondAttribute="height" multiplier="125:201" id="RqG-si-mS4"/>
                                 </constraints>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="TrO-xc-fWc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.095068906920000001" green="0.72186893819999998" blue="0.89519137140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

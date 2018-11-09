@@ -27,6 +27,7 @@ final class FlightsViewController: UIViewController {
 // MARK: - FlightsModelOutput
 extension FlightsViewController: FlightsModelOutput {
     func modelDidSucces(_ data: [FlightData]){
+        contentView.stopIndicator()
         dataSource.items = data
         DispatchQueue.main.sync {
             self.contentView.prepare { (table) in

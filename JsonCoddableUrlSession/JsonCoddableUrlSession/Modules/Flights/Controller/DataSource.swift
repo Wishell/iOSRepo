@@ -19,7 +19,6 @@ extension DataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "\(UITableViewCell.self)"
-        print (identifier)
         let item = items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: identifier)
         cell.textLabel?.text = item.Flight
