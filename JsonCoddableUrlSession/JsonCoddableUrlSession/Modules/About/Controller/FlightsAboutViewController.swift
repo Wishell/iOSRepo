@@ -13,6 +13,12 @@ final class FlightsAboutViewController: UIViewController {
     var model: FlightsAboutModelInput!
     lazy var contentView: FlightsAboutViewInput = { return view as! FlightsAboutViewInput }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        contentView.onButtonTap = {
+     //       self.navigationController?.pushViewController(FlightsViewController.self, animated: true)
+        }
+    }
 }
 
 // MARK: - FlightsAboutModelOutput

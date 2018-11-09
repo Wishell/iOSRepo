@@ -8,14 +8,18 @@
 
 import UIKit
 
-protocol FlightsAboutViewInput: class {}
+protocol FlightsAboutViewInput: class {
+    var onButtonTap:(()->Void)? {get set}
+}
 
 final class FlightsAboutView: UIView {
-    @IBOutlet weak var image: UIImageView!
-    
     @IBOutlet weak var button: UIButton!
+    
     @IBAction func OnButtonTouch(_ sender: Any) {
+        onButtonTap?()
     }
+    
+    var onButtonTap:(()->Void)?
 }
 
 // MARK: - FlightsAboutViewInput
