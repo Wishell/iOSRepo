@@ -8,5 +8,5 @@
 
 protocol FlightsModelOutput: class {
     func modelDidSucces(_ data: [FlightData])
-    func modelDidFail(error: Error)
+    func modelDidFail()
 }

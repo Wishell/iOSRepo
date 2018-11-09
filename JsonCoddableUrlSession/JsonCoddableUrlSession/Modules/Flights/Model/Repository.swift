@@ -10,7 +10,7 @@ import Foundation
 
 // TODO: - Move to the separated file FlightData.swift
 struct FlightData: Codable {
-    let Airline: String
+    let airline: String
     let Flight: String
     let ActualTime: String
 }

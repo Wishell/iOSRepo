@@ -41,7 +41,12 @@ extension FlightsViewController: FlightsModelOutput {
         
     }
     
-    func modelDidFail(error: Error){}
+    func modelDidFail(){
+        DispatchQueue.main.sync {
+            self.navigationController?.popViewController(animated: true)
+        }
+
+    }
 }
 
 // MARK: - FlightsViewControllerInput

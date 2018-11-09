@@ -20,7 +20,7 @@ final class FlightsModel: FlightsModelInput {
                 self.output.modelDidSucces(items)
                 print("\(self) retrive flights: \(items)")
             case .failure(let error):
-                
+                self.output.modelDidFail()
                 print("\(self) retrive error on get flights: \(error)")
             }
         }
