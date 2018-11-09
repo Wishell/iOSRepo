@@ -36,11 +36,15 @@
                         <color key="backgroundColor" red="0.52640960941037118" green="0.74396851984602574" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="1C7-R7-pms">
-                        <barButtonItem key="rightBarButtonItem" title="Get flights" id="CGr-m8-VFe"/>
+                    <navigationItem key="navigationItem" title="About" id="1C7-R7-pms">
+                        <barButtonItem key="rightBarButtonItem" title="Get flights" id="CGr-m8-VFe">
+                            <connections>
+                                <action selector="GetFlights:" destination="8bC-Xf-vdC" id="GZh-Jq-SNd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Xde-Mt-Gtn" kind="show" id="96d-sN-sLl"/>
+                        <segue destination="Xde-Mt-Gtn" kind="show" identifier="seg" id="UNJ-sT-lwe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,47 +59,67 @@
         <!--View Controller-->
         <scene sceneID="B84-Vq-cr5">
             <objects>
-                <viewController id="Xde-Mt-Gtn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vXr-8w-xDL">
+                <viewController id="Xde-Mt-Gtn" customClass="FlightsViewController" customModule="JsonCoddableUrlSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vXr-8w-xDL" customClass="FlightsView" customModule="JsonCoddableUrlSession" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2N6-UC-IWd">
-                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2N6-UC-IWd" secondAttribute="height" multiplier="125:201" id="RqG-si-mS4"/>
+                                </constraints>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="TrO-xc-fWc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.095068906920000001" green="0.72186893819999998" blue="0.89519137140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="2N6-UC-IWd" firstAttribute="width" secondItem="vXr-8w-xDL" secondAttribute="width" id="NP8-Iu-EAb"/>
-                            <constraint firstItem="2N6-UC-IWd" firstAttribute="top" secondItem="qAM-0J-TUd" secondAttribute="top" constant="31" id="ThA-sw-lDr"/>
-                            <constraint firstItem="2N6-UC-IWd" firstAttribute="leading" secondItem="vXr-8w-xDL" secondAttribute="leading" id="oD2-vT-2uo"/>
-                            <constraint firstItem="qAM-0J-TUd" firstAttribute="bottom" secondItem="2N6-UC-IWd" secondAttribute="bottom" id="pYx-hl-dGp"/>
+                            <constraint firstItem="2N6-UC-IWd" firstAttribute="leading" secondItem="vXr-8w-xDL" secondAttribute="leading" id="SKB-td-kzt"/>
+                            <constraint firstItem="2N6-UC-IWd" firstAttribute="bottom" secondItem="qAM-0J-TUd" secondAttribute="bottom" id="mO8-xJ-akS"/>
+                            <constraint firstItem="2N6-UC-IWd" firstAttribute="top" secondItem="qAM-0J-TUd" secondAttribute="top" id="vVU-vR-ZR7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qAM-0J-TUd"/>
+                        <connections>
+                            <outlet property="table" destination="2N6-UC-IWd" id="Rc6-oj-fAT"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Flights" id="QOA-6Z-sFt"/>
                     <connections>
-                        <segue destination="VC1-k5-U5u" kind="show" id="MMA-Y1-VRC"/>
+                        <segue destination="VC1-k5-U5u" kind="show" id="1c7-cq-eSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGN-Lt-UAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="YCC-Jx-an5" customClass="FlightsModuleInitializer" customModule="JsonCoddableUrlSession" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="Xde-Mt-Gtn" id="DBT-sI-OKY"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="376.80000000000001" y="-99.400299850074973"/>
         </scene>
-        <!--View Controller-->
+        <!--Details-->
         <scene sceneID="zyV-6B-Qjc">
             <objects>
-                <viewController id="VC1-k5-U5u" sceneMemberID="viewController">
+                <viewController id="VC1-k5-U5u" customClass="DetailsViewController" customModule="JsonCoddableUrlSession" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rcr-IU-S0A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WgN-d3-V7h"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Details" id="D6m-Vg-fav"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byc-jy-fYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="8sh-vI-r71" customClass="DetailsModuleInitializer" customModule="JsonCoddableUrlSession" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-96"/>
+            <point key="canvasLocation" x="1183" y="-99"/>
         </scene>
     </scenes>
 </document>

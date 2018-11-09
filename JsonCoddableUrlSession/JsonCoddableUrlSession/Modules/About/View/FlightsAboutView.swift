@@ -9,17 +9,16 @@
 import UIKit
 
 protocol FlightsAboutViewInput: class {
-    var onButtonTap:(()->Void)? {get set}
+    var onGetFlightsTap:(()->Void)? {get set}
 }
 
 final class FlightsAboutView: UIView {
-    @IBOutlet weak var button: UIButton!
-    
-    @IBAction func OnButtonTouch(_ sender: Any) {
-        onButtonTap?()
+
+    @IBAction func GetFlights(_ sender: Any) {
+        onGetFlightsTap?()
     }
-    
-    var onButtonTap:(()->Void)?
+
+    var onGetFlightsTap:(()->Void)?
 }
 
 // MARK: - FlightsAboutViewInput

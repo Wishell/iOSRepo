@@ -6,4 +6,7 @@
 //  Copyright © 2018 Vialyx. All rights reserved.
 //
 
-protocol FlightsModelOutput: class {}
+protocol FlightsModelOutput: class {
+    func modelDidSucces(_ data: [FlightData])
+    func modelDidFail(error: Error)
+}

@@ -13,16 +13,19 @@ final class FlightsAboutViewController: UIViewController {
     var model: FlightsAboutModelInput!
     lazy var contentView: FlightsAboutViewInput = { return view as! FlightsAboutViewInput }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.onButtonTap = {
-     //       self.navigationController?.pushViewController(FlightsViewController.self, animated: true)
+        contentView.onGetFlightsTap = {
+            //self.navigationController?.pushViewController(FlightsViewController(), animated: true)
+            self.performSegue(withIdentifier: "seg", sender: FlightsAboutViewInput.self)
         }
     }
 }
 
 // MARK: - FlightsAboutModelOutput
-extension FlightsAboutViewController: FlightsAboutModelOutput {}
+extension FlightsAboutViewController: FlightsAboutModelOutput {
+}
 
 // MARK: - FlightsAboutViewControllerInput
 extension FlightsAboutViewController: FlightsAboutViewControllerInput {}

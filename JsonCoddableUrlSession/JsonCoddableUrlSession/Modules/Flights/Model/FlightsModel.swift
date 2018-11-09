@@ -11,5 +11,18 @@ import Foundation
 final class FlightsModel: FlightsModelInput {
     
     weak var output: FlightsModelOutput!
+    let repository = Repository(apiClient: APIClient())
     
+    func load(){
+        repository.getFlights { (result) in
+            switch result {
+            case .success(let items):
+                self.output.modelDidSucces(items)
+                print("\(self) retrive flights: \(items)")
+            case .failure(let error):
+                
+                print("\(self) retrive error on get flights: \(error)")
+            }
+        }
+    }
 }

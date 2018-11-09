@@ -11,5 +11,6 @@ import Foundation
 final class FlightsAboutModel: FlightsAboutModelInput {
     
     weak var output: FlightsAboutModelOutput!
+   
     
 }

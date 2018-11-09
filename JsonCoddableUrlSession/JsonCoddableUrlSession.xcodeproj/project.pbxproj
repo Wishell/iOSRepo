@@ -31,8 +31,8 @@
 		48F95D2F2195AA83003ABA44 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F95D272195AA83003ABA44 /* DetailsModel.swift */; };
 		48F95D302195AA83003ABA44 /* DetailsModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F95D282195AA83003ABA44 /* DetailsModelInput.swift */; };
 		48F95D312195AA83003ABA44 /* DetailsModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F95D292195AA83003ABA44 /* DetailsModuleConfigurator.swift */; };
+		48F95D372196267E003ABA44 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F95D362196267E003ABA44 /* DataSource.swift */; };
 		C460A2BE2193E354004DA3AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460A2BD2193E354004DA3AC /* AppDelegate.swift */; };
-		C460A2C02193E354004DA3AC /* !!!.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460A2BF2193E354004DA3AC /* !!!.swift */; };
 		C460A2C32193E354004DA3AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C460A2C12193E354004DA3AC /* Main.storyboard */; };
 		C460A2C52193E355004DA3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C460A2C42193E355004DA3AC /* Assets.xcassets */; };
 		C460A2C82193E355004DA3AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C460A2C62193E355004DA3AC /* LaunchScreen.storyboard */; };
@@ -84,9 +84,9 @@
 		48F95D272195AA83003ABA44 /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
 		48F95D282195AA83003ABA44 /* DetailsModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModelInput.swift; sourceTree = "<group>"; };
 		48F95D292195AA83003ABA44 /* DetailsModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModuleConfigurator.swift; sourceTree = "<group>"; };
+		48F95D362196267E003ABA44 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		C460A2BA2193E354004DA3AC /* JsonCoddableUrlSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonCoddableUrlSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C460A2BD2193E354004DA3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C460A2BF2193E354004DA3AC /* !!!.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "!!!.swift"; sourceTree = "<group>"; };
 		C460A2C22193E354004DA3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C460A2C42193E355004DA3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C460A2C72193E355004DA3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,6 +153,7 @@
 			children = (
 				48F95CF42195A3AF003ABA44 /* FlightsViewControllerInput.swift */,
 				48F95CF62195A3AF003ABA44 /* FlightsViewController.swift */,
+				48F95D362196267E003ABA44 /* DataSource.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,7 +305,6 @@
 			children = (
 				48F95CF22195A385003ABA44 /* Modules */,
 				C460A2BD2193E354004DA3AC /* AppDelegate.swift */,
-				C460A2BF2193E354004DA3AC /* !!!.swift */,
 				C460A2C12193E354004DA3AC /* Main.storyboard */,
 				C460A2C42193E355004DA3AC /* Assets.xcassets */,
 				C460A2C62193E355004DA3AC /* LaunchScreen.storyboard */,
@@ -465,7 +465,6 @@
 				48F95D162195AA09003ABA44 /* FlightsAboutViewController.swift in Sources */,
 				48F95D012195A3AF003ABA44 /* FlightsModelInput.swift in Sources */,
 				48F95D152195AA09003ABA44 /* FlightsAboutModuleInitializer.swift in Sources */,
-				C460A2C02193E354004DA3AC /* !!!.swift in Sources */,
 				48F95D2F2195AA83003ABA44 /* DetailsModel.swift in Sources */,
 				C460A2BE2193E354004DA3AC /* AppDelegate.swift in Sources */,
 				48F95CFC2195A3AF003ABA44 /* FlightsViewControllerInput.swift in Sources */,
@@ -487,6 +486,7 @@
 				48F95D192195AA09003ABA44 /* FlightsAboutModelInput.swift in Sources */,
 				48F95D132195AA09003ABA44 /* FlightsAboutModelOutput.swift in Sources */,
 				48F95D302195AA83003ABA44 /* DetailsModelInput.swift in Sources */,
+				48F95D372196267E003ABA44 /* DataSource.swift in Sources */,
 				48F95D172195AA09003ABA44 /* FlightsAboutView.swift in Sources */,
 				48F95D1A2195AA09003ABA44 /* FlightsAboutModuleConfigurator.swift in Sources */,
 				48F95CFB2195A3AF003ABA44 /* FlightsModelOutput.swift in Sources */,
