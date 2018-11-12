@@ -15,6 +15,7 @@ struct FlightData: Codable {
     let ActualTime: String
 }
 
+
 final class Repository {
     
     private let apiClient: APIClient!

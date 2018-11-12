@@ -41,7 +41,9 @@ extension FlightsView: FlightsViewInput {
     }
     
     func stopIndicator (){
-        spinner.stopAnimating()
+        DispatchQueue.main.async {
+                    self.spinner.stopAnimating()
+        }
     }
     
 }

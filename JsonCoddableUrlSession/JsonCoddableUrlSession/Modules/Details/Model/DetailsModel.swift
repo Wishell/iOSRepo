@@ -11,5 +11,12 @@ import Foundation
 final class DetailsModel: DetailsModelInput {
     
     weak var output: DetailsModelOutput!
+    var data: FlightData!
+   // let data2: FlightData = FlightData!
+    
+    
+    
+    
+    
     
 }

@@ -18,9 +18,16 @@ final class FlightsViewController: UIViewController {
         super.viewDidLoad()
         model.load()
         contentView.tableDataSource = {[unowned self] in return self.dataSource}
-        //let VC = DetailsViewController()
-        //navigationController?.pushViewController(VC, animated: true)
-
+        contentView.onTableItemTap = {[unowned self] item in
+            self.performSegue(withIdentifier: "detailsView", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailsView", let data = sender as? FlightData {
+            let controller = segue.destination as! DetailsViewControllerInput
+            controller.set(data)
+        }
     }
 }
 
@@ -42,7 +49,7 @@ extension FlightsViewController: FlightsModelOutput {
     }
     
     func modelDidFail(){
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             self.navigationController?.popViewController(animated: true)
         }
 

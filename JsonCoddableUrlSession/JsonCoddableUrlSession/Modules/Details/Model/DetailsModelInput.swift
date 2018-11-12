@@ -6,4 +6,6 @@
 //  Copyright © 2018 Vialyx. All rights reserved.
 //
 
-protocol DetailsModelInput {}
+protocol DetailsModelInput {
+    var data: FlightData! { get set }
+}

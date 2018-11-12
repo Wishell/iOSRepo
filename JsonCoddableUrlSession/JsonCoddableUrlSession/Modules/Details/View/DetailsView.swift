@@ -8,9 +8,21 @@
 
 import UIKit
 
-protocol DetailsViewInput: class {}
+protocol DetailsViewInput: class {
+    func display(_ data: FlightData)
+}
 
-final class DetailsView: UIView {}
+final class DetailsView: UIView {
+    
+    @IBOutlet weak var localView: DetailsViewCell!
+    
+    
+    
+}
 
 // MARK: - DetailsViewInput
-extension DetailsView: DetailsViewInput {}
+extension DetailsView: DetailsViewInput {
+    func display(_ data: FlightData){
+        localView.display(data)
+    }
+}

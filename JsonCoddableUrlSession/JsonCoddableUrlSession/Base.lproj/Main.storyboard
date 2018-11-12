@@ -83,7 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Flights" id="QOA-6Z-sFt"/>
                     <connections>
-                        <segue destination="VC1-k5-U5u" kind="show" id="1c7-cq-eSU"/>
+                        <segue destination="VC1-k5-U5u" kind="show" identifier="detailsView" id="1c7-cq-eSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGN-Lt-UAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,24 +95,43 @@
             </objects>
             <point key="canvasLocation" x="376.80000000000001" y="-99.400299850074973"/>
         </scene>
-        <!--Details-->
+        <!--View Controller-->
         <scene sceneID="zyV-6B-Qjc">
             <objects>
                 <viewController id="VC1-k5-U5u" customClass="DetailsViewController" customModule="JsonCoddableUrlSession" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rcr-IU-S0A">
+                    <view key="view" contentMode="scaleToFill" id="rcr-IU-S0A" customClass="DetailsView" customModule="JsonCoddableUrlSession" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-9u-srR" customClass="DetailsViewCell" customModule="JsonCoddableUrlSession" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MUe-9u-srR" firstAttribute="bottom" secondItem="WgN-d3-V7h" secondAttribute="bottom" id="Avp-L1-g3G"/>
+                            <constraint firstItem="MUe-9u-srR" firstAttribute="leading" secondItem="rcr-IU-S0A" secondAttribute="leading" id="BIZ-nq-EkD"/>
+                            <constraint firstAttribute="trailing" secondItem="MUe-9u-srR" secondAttribute="trailing" id="Wfn-ES-ga3"/>
+                            <constraint firstItem="MUe-9u-srR" firstAttribute="top" secondItem="WgN-d3-V7h" secondAttribute="top" id="ree-Vg-WYL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WgN-d3-V7h"/>
+                        <connections>
+                            <outlet property="localView" destination="MUe-9u-srR" id="5W3-5h-DAY"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Details" id="D6m-Vg-fav"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byc-jy-fYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="8sh-vI-r71" customClass="DetailsModuleInitializer" customModule="JsonCoddableUrlSession" customModuleProvider="target"/>
+                <customObject id="8sh-vI-r71" customClass="DetailsModuleInitializer" customModule="JsonCoddableUrlSession" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="VC1-k5-U5u" id="kZZ-8k-Mk0"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="1183" y="-99"/>
+            <point key="canvasLocation" x="1181.5999999999999" y="-99.400299850074973"/>
         </scene>
     </scenes>
 </document>
