@@ -13,6 +13,12 @@ final class ImageTableViewController: UIViewController {
     var model: ImageTableModelInput!
     lazy var contentView: ImageTableViewInput = { return view as! ImageTableViewInput }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        contentView.onLoad = {
+            self.model.load()
+        }
+    }
 }
 
 // MARK: - ImageTableModelOutput

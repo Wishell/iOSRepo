@@ -8,14 +8,18 @@
 
 import UIKit
 
-protocol ImageTableViewInput: class {}
+protocol ImageTableViewInput: class {
+    var onLoad:(()->Void)? {get set}
+}
 
 final class ImageTableView: UIView {
     
     @IBOutlet weak var table: UITableView!
     @IBAction func OnLoadTap(_ sender: Any) {
-        
+        onLoad?()
     }
+    
+     var onLoad:(()->Void)?
     
 }
 
