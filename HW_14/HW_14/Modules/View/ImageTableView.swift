@@ -12,6 +12,7 @@ protocol ImageTableViewInput: class {
     var onLoad:(()->Void)? {get set}
     func prepare (_ registrate :((UITableView)->Void))
     var tableDataSource: (() -> DataSource)? { get set }
+    var prepareCellHeight: ((UITableView)->Void)? {get set}
 }
 
 final class ImageTableView: UIView {
@@ -23,13 +24,16 @@ final class ImageTableView: UIView {
     
      var onLoad:(()->Void)?
     var tableDataSource: (() -> DataSource)?
+    var prepareCellHeight: ((UITableView)->Void)?
 }
 
 // MARK: - ImageTableViewInput
 extension ImageTableView: ImageTableViewInput {
     
     func prepare (_ registrate :((UITableView)->Void)){
-        registrate(self.table)
+        prepareCellHeight?(table)
+        registrate(table)
+        
     }
     
 }

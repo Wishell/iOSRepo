@@ -19,6 +19,10 @@ final class ImageTableViewController: UIViewController {
             self.model.load()
         }
         contentView.tableDataSource = { [unowned self] in return self.dataSource }
+        contentView.prepareCellHeight = {table in
+            table.rowHeight = UITableView.automaticDimension
+            table.estimatedRowHeight = UITableView.automaticDimension
+        }
     }
 }
 
@@ -27,7 +31,7 @@ extension ImageTableViewController: ImageTableModelOutput {
     
     func modelDidLoad(_ dataSource: ImageData) {
         self.dataSource.items = dataSource
-DispatchQueue.main.sync {
+        DispatchQueue.main.sync {
     self.contentView.prepare { [unowned self] (table) in
             table.dataSource = self.dataSource
             let nib = UINib(nibName: "ImageCell", bundle: nil)

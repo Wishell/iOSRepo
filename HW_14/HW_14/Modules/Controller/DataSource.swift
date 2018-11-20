@@ -23,4 +23,8 @@ extension DataSource: UITableViewDataSource {
         cell.configure(items.ImagePath[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
