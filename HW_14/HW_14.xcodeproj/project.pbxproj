@@ -13,6 +13,14 @@
 		483FF92421A4866E00C11CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483FF92221A4866E00C11CD0 /* LaunchScreen.storyboard */; };
 		483FF92F21A4866E00C11CD0 /* HW_14Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF92E21A4866E00C11CD0 /* HW_14Tests.swift */; };
 		483FF93A21A4866E00C11CD0 /* HW_14UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF93921A4866E00C11CD0 /* HW_14UITests.swift */; };
+		483FF96A21A48C1F00C11CD0 /* ImageTableModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96221A48C1F00C11CD0 /* ImageTableModelOutput.swift */; };
+		483FF96B21A48C1F00C11CD0 /* ImageTableViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96321A48C1F00C11CD0 /* ImageTableViewControllerInput.swift */; };
+		483FF96C21A48C1F00C11CD0 /* ImageTableModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96421A48C1F00C11CD0 /* ImageTableModuleInitializer.swift */; };
+		483FF96D21A48C1F00C11CD0 /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96521A48C1F00C11CD0 /* ImageTableViewController.swift */; };
+		483FF96E21A48C1F00C11CD0 /* ImageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96621A48C1F00C11CD0 /* ImageTableView.swift */; };
+		483FF96F21A48C1F00C11CD0 /* ImageTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */; };
+		483FF97021A48C1F00C11CD0 /* ImageTableModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */; };
+		483FF97121A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96921A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		483FF93521A4866E00C11CD0 /* HW_14UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HW_14UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		483FF93921A4866E00C11CD0 /* HW_14UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_14UITests.swift; sourceTree = "<group>"; };
 		483FF93B21A4866E00C11CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483FF96221A48C1F00C11CD0 /* ImageTableModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModelOutput.swift; sourceTree = "<group>"; };
+		483FF96321A48C1F00C11CD0 /* ImageTableViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewControllerInput.swift; sourceTree = "<group>"; };
+		483FF96421A48C1F00C11CD0 /* ImageTableModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModuleInitializer.swift; sourceTree = "<group>"; };
+		483FF96521A48C1F00C11CD0 /* ImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
+		483FF96621A48C1F00C11CD0 /* ImageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableView.swift; sourceTree = "<group>"; };
+		483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModel.swift; sourceTree = "<group>"; };
+		483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModelInput.swift; sourceTree = "<group>"; };
+		483FF96921A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModuleConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +111,7 @@
 		483FF91821A4866B00C11CD0 /* HW_14 */ = {
 			isa = PBXGroup;
 			children = (
+				483FF96121A48BEE00C11CD0 /* Modules */,
 				483FF91921A4866B00C11CD0 /* AppDelegate.swift */,
 				483FF91D21A4866B00C11CD0 /* Main.storyboard */,
 				483FF92021A4866E00C11CD0 /* Assets.xcassets */,
@@ -120,6 +137,61 @@
 				483FF93B21A4866E00C11CD0 /* Info.plist */,
 			);
 			path = HW_14UITests;
+			sourceTree = "<group>";
+		};
+		483FF96121A48BEE00C11CD0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				483FF97221A48C2700C11CD0 /* ImageTable */,
+				483FF97321A48C3100C11CD0 /* Model */,
+				483FF97421A48C3900C11CD0 /* Controller */,
+				483FF97521A48C4300C11CD0 /* Configure */,
+				483FF97621A48C4B00C11CD0 /* View */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		483FF97221A48C2700C11CD0 /* ImageTable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageTable;
+			sourceTree = "<group>";
+		};
+		483FF97321A48C3100C11CD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */,
+				483FF96221A48C1F00C11CD0 /* ImageTableModelOutput.swift */,
+				483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		483FF97421A48C3900C11CD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				483FF96321A48C1F00C11CD0 /* ImageTableViewControllerInput.swift */,
+				483FF96521A48C1F00C11CD0 /* ImageTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		483FF97521A48C4300C11CD0 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				483FF96421A48C1F00C11CD0 /* ImageTableModuleInitializer.swift */,
+				483FF96921A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		483FF97621A48C4B00C11CD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				483FF96621A48C1F00C11CD0 /* ImageTableView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +325,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483FF96F21A48C1F00C11CD0 /* ImageTableModel.swift in Sources */,
+				483FF97021A48C1F00C11CD0 /* ImageTableModelInput.swift in Sources */,
+				483FF96D21A48C1F00C11CD0 /* ImageTableViewController.swift in Sources */,
+				483FF96E21A48C1F00C11CD0 /* ImageTableView.swift in Sources */,
 				483FF91A21A4866B00C11CD0 /* AppDelegate.swift in Sources */,
+				483FF96A21A48C1F00C11CD0 /* ImageTableModelOutput.swift in Sources */,
+				483FF97121A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift in Sources */,
+				483FF96B21A48C1F00C11CD0 /* ImageTableViewControllerInput.swift in Sources */,
+				483FF96C21A48C1F00C11CD0 /* ImageTableModuleInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
