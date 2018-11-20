@@ -36,7 +36,7 @@
                     </connections>
                 </customObject>
                 <viewController id="BYZ-38-t0r" customClass="ImageTableViewController" customModule="HW_14" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ImageTableView" customModule="HW_14" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -53,9 +53,16 @@
                             <constraint firstItem="2yj-K3-WjC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dct-Ji-Esb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="table" destination="2yj-K3-WjC" id="nJj-wJ-O1l"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="JmR-wI-aLp">
-                        <barButtonItem key="rightBarButtonItem" title="load" id="sIa-Qt-QA2"/>
+                        <barButtonItem key="rightBarButtonItem" title="load" id="sIa-Qt-QA2">
+                            <connections>
+                                <action selector="OnLoadTap:" destination="8bC-Xf-vdC" id="Z2d-ec-hWj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
             </objects>

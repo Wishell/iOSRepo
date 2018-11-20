@@ -10,7 +10,14 @@ import UIKit
 
 protocol ImageTableViewInput: class {}
 
-final class ImageTableView: UIView {}
+final class ImageTableView: UIView {
+    
+    @IBOutlet weak var table: UITableView!
+    @IBAction func OnLoadTap(_ sender: Any) {
+        
+    }
+    
+}
 
 // MARK: - ImageTableViewInput
 extension ImageTableView: ImageTableViewInput {}
