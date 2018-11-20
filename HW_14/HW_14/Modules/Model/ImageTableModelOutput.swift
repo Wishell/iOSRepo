@@ -6,4 +6,7 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol ImageTableModelOutput: class {}
+protocol ImageTableModelOutput: class {
+    func modelDidLoad(_ data: ImageData)
+    func modelDidFail(_ error: Error)
+}

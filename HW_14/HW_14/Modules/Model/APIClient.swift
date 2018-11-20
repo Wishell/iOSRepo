@@ -1,9 +1,9 @@
 //
-//  APIClient.swift
-//  JsonCoddableUrlSession
+//  ImageTableModelInput.swift
+//  HW_14
 //
-//  Created by Maksim Vialykh on 08/11/2018.
-//  Copyright © 2018 Vialyx. All rights reserved.
+//  Created by Wishell on 20.11.2018.
+//  Copyright © 2018 Wishell. All rights reserved.
 //
 
 import Foundation

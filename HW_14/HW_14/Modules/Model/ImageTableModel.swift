@@ -18,9 +18,9 @@ final class ImageTableModel: ImageTableModelInput {
         repository.getImages { (result) in
             switch result {
             case .success(let images):
-                print("OK")
-            case .failure(_):
-                print("Fail")
+                self.output.modelDidLoad(images)
+            case .failure(let error):
+                self.output.modelDidFail(error)
             }
             
         }

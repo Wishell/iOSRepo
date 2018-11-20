@@ -10,6 +10,8 @@ import UIKit
 
 protocol ImageTableViewInput: class {
     var onLoad:(()->Void)? {get set}
+    func prepare (_ registrate :((UITableView)->Void))
+    var tableDataSource: (() -> DataSource)? { get set }
 }
 
 final class ImageTableView: UIView {
@@ -20,8 +22,14 @@ final class ImageTableView: UIView {
     }
     
      var onLoad:(()->Void)?
-    
+    var tableDataSource: (() -> DataSource)?
 }
 
 // MARK: - ImageTableViewInput
-extension ImageTableView: ImageTableViewInput {}
+extension ImageTableView: ImageTableViewInput {
+    
+    func prepare (_ registrate :((UITableView)->Void)){
+        registrate(self.table)
+    }
+    
+}

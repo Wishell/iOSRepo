@@ -1,9 +1,9 @@
 //
-//  Repository.swift
-//  JsonCoddableUrlSession
+//  ImageTableModelInput.swift
+//  HW_14
 //
-//  Created by Maksim Vialykh on 08/11/2018.
-//  Copyright © 2018 Vialyx. All rights reserved.
+//  Created by Wishell on 20.11.2018.
+//  Copyright © 2018 Wishell. All rights reserved.
 //
 
 import Foundation
@@ -14,27 +14,27 @@ struct ImageData {
 }
 
 extension ImageData: Codable {
-    
+
     init(from decoder: Decoder) throws {
-        if var values = try? decoder.unkeyedContainer(){
+        if var values = try? decoder.unkeyedContainer() {
             while values.isAtEnd == false {
                 if let value = try? values.decode(String.self) {
                     ImagePath.append(value)
+                }
             }
         }
     }
-}
-    
+
 }
 
 final class Repository {
-    
+
     private let apiClient: APIClient!
-    
+
     init(apiClient: APIClient) {
         self.apiClient = apiClient
     }
-    
+
     func getImages(_ completion: @escaping ((Result<ImageData>) -> Void)) {
         let resource = Resource(url: URL(string: "https://api.myjson.com/bins/b1mm6")!)
         apiClient.load(resource) { (result) in
@@ -51,5 +51,5 @@ final class Repository {
             }
         }
     }
-    
+
 }
