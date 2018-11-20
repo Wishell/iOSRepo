@@ -21,6 +21,8 @@
 		483FF96F21A48C1F00C11CD0 /* ImageTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */; };
 		483FF97021A48C1F00C11CD0 /* ImageTableModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */; };
 		483FF97121A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF96921A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift */; };
+		483FF97E21A48EAC00C11CD0 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF97D21A48EAC00C11CD0 /* Repository.swift */; };
+		483FF98021A48EC000C11CD0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF97F21A48EC000C11CD0 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModel.swift; sourceTree = "<group>"; };
 		483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModelInput.swift; sourceTree = "<group>"; };
 		483FF96921A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableModuleConfigurator.swift; sourceTree = "<group>"; };
+		483FF97D21A48EAC00C11CD0 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		483FF97F21A48EC000C11CD0 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,8 @@
 		483FF97321A48C3100C11CD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				483FF97F21A48EC000C11CD0 /* APIClient.swift */,
+				483FF97D21A48EAC00C11CD0 /* Repository.swift */,
 				483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */,
 				483FF96221A48C1F00C11CD0 /* ImageTableModelOutput.swift */,
 				483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */,
@@ -330,8 +336,10 @@
 				483FF96D21A48C1F00C11CD0 /* ImageTableViewController.swift in Sources */,
 				483FF96E21A48C1F00C11CD0 /* ImageTableView.swift in Sources */,
 				483FF91A21A4866B00C11CD0 /* AppDelegate.swift in Sources */,
+				483FF98021A48EC000C11CD0 /* APIClient.swift in Sources */,
 				483FF96A21A48C1F00C11CD0 /* ImageTableModelOutput.swift in Sources */,
 				483FF97121A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift in Sources */,
+				483FF97E21A48EAC00C11CD0 /* Repository.swift in Sources */,
 				483FF96B21A48C1F00C11CD0 /* ImageTableViewControllerInput.swift in Sources */,
 				483FF96C21A48C1F00C11CD0 /* ImageTableModuleInitializer.swift in Sources */,
 			);
