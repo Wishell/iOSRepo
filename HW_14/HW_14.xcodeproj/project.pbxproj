@@ -26,6 +26,9 @@
 		483FF98221A4A3FB00C11CD0 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF98121A4A3FB00C11CD0 /* DataSource.swift */; };
 		483FF98621A4A57200C11CD0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF98421A4A57200C11CD0 /* ImageCell.swift */; };
 		483FF98721A4A57200C11CD0 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483FF98521A4A57200C11CD0 /* ImageCell.xib */; };
+		483FF98C21A5688900C11CD0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF98B21A5688900C11CD0 /* Resource.swift */; };
+		483FF98E21A568AB00C11CD0 /* GenericResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF98D21A568AB00C11CD0 /* GenericResult.swift */; };
+		483FF99121A5690F00C11CD0 /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF99021A5690F00C11CD0 /* URLRequest+Resource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		483FF98121A4A3FB00C11CD0 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		483FF98421A4A57200C11CD0 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		483FF98521A4A57200C11CD0 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		483FF98B21A5688900C11CD0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		483FF98D21A568AB00C11CD0 /* GenericResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResult.swift; sourceTree = "<group>"; };
+		483FF99021A5690F00C11CD0 /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +127,14 @@
 		483FF91821A4866B00C11CD0 /* HW_14 */ = {
 			isa = PBXGroup;
 			children = (
+				483FF98F21A568CA00C11CD0 /* Extensions */,
 				483FF96121A48BEE00C11CD0 /* Modules */,
 				483FF91921A4866B00C11CD0 /* AppDelegate.swift */,
 				483FF91D21A4866B00C11CD0 /* Main.storyboard */,
 				483FF92021A4866E00C11CD0 /* Assets.xcassets */,
 				483FF92221A4866E00C11CD0 /* LaunchScreen.storyboard */,
 				483FF92521A4866E00C11CD0 /* Info.plist */,
+				483FF98D21A568AB00C11CD0 /* GenericResult.swift */,
 			);
 			path = HW_14;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				483FF96821A48C1F00C11CD0 /* ImageTableModelInput.swift */,
 				483FF96221A48C1F00C11CD0 /* ImageTableModelOutput.swift */,
 				483FF96721A48C1F00C11CD0 /* ImageTableModel.swift */,
+				483FF98B21A5688900C11CD0 /* Resource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +224,14 @@
 				483FF98521A4A57200C11CD0 /* ImageCell.xib */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		483FF98F21A568CA00C11CD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				483FF99021A5690F00C11CD0 /* URLRequest+Resource.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +369,7 @@
 				483FF96F21A48C1F00C11CD0 /* ImageTableModel.swift in Sources */,
 				483FF97021A48C1F00C11CD0 /* ImageTableModelInput.swift in Sources */,
 				483FF96D21A48C1F00C11CD0 /* ImageTableViewController.swift in Sources */,
+				483FF99121A5690F00C11CD0 /* URLRequest+Resource.swift in Sources */,
 				483FF96E21A48C1F00C11CD0 /* ImageTableView.swift in Sources */,
 				483FF91A21A4866B00C11CD0 /* AppDelegate.swift in Sources */,
 				483FF98021A48EC000C11CD0 /* APIClient.swift in Sources */,
@@ -359,9 +377,11 @@
 				483FF96A21A48C1F00C11CD0 /* ImageTableModelOutput.swift in Sources */,
 				483FF97121A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift in Sources */,
 				483FF97E21A48EAC00C11CD0 /* Repository.swift in Sources */,
+				483FF98E21A568AB00C11CD0 /* GenericResult.swift in Sources */,
 				483FF96B21A48C1F00C11CD0 /* ImageTableViewControllerInput.swift in Sources */,
 				483FF96C21A48C1F00C11CD0 /* ImageTableModuleInitializer.swift in Sources */,
 				483FF98621A4A57200C11CD0 /* ImageCell.swift in Sources */,
+				483FF98C21A5688900C11CD0 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
