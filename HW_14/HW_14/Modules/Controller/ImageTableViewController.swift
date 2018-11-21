@@ -21,7 +21,7 @@ final class ImageTableViewController: UIViewController {
         contentView.tableDataSource = { [unowned self] in return self.dataSource }
         contentView.prepareCellHeight = {table in
             table.rowHeight = UITableView.automaticDimension
-            table.estimatedRowHeight = UITableView.automaticDimension
+            table.estimatedRowHeight = 250
         }
     }
 }
@@ -29,7 +29,7 @@ final class ImageTableViewController: UIViewController {
 // MARK: - ImageTableModelOutput
 extension ImageTableViewController: ImageTableModelOutput {
     
-    func modelDidLoad(_ dataSource: ImageData) {
+    func modelDidLoad(_ dataSource: [String]) {
         self.dataSource.items = dataSource
         DispatchQueue.main.sync {
     self.contentView.prepare { [unowned self] (table) in

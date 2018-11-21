@@ -8,25 +8,6 @@
 
 import Foundation
 
-// TODO: - Move to the separated file FlightData.swift
-struct ImageData {
-    var ImagePath: [String] = []
-}
-
-extension ImageData: Codable {
-
-    init(from decoder: Decoder) throws {
-        if var values = try? decoder.unkeyedContainer() {
-            while values.isAtEnd == false {
-                if let value = try? values.decode(String.self) {
-                    ImagePath.append(value)
-                }
-            }
-        }
-    }
-
-}
-
 final class Repository {
 
     private let apiClient: APIClient!
@@ -35,13 +16,13 @@ final class Repository {
         self.apiClient = apiClient
     }
 
-    func getImages(_ completion: @escaping ((Result<ImageData>) -> Void)) {
+    func getImages(_ completion: @escaping ((Result<[String]>) -> Void)) {
         let resource = Resource(url: URL(string: "https://api.myjson.com/bins/b1mm6")!)
         apiClient.load(resource) { (result) in
             switch result {
             case .success(let data):
                 do {
-                    let items = try JSONDecoder().decode(ImageData.self, from: data)
+                    let items = try JSONDecoder().decode([String].self, from: data)
                     completion(.success(items))
                 } catch {
                     completion(.failure(error))

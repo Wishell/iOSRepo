@@ -7,6 +7,6 @@
 //
 
 protocol ImageTableModelOutput: class {
-    func modelDidLoad(_ data: ImageData)
+    func modelDidLoad(_ data: [String])
     func modelDidFail(_ error: Error)
 }

@@ -33,7 +33,7 @@ extension ImageCell {
                 //to do cash
             })
         })
-        workItem.flatMap{queue.sync(execute: $0)}
+        workItem.flatMap{queue.async(execute: $0)}
     }
     
 }
