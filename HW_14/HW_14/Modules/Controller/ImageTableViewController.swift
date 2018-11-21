@@ -33,7 +33,7 @@ extension ImageTableViewController: ImageTableModelOutput {
     func modelDidLoad(_ dataSource: [String]) {
         self.contentView.stopISpinner()
         self.dataSource.items = dataSource
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
     self.contentView.prepare { [unowned self] (table) in
             table.dataSource = self.dataSource
             let nib = UINib(nibName: "ImageCell", bundle: nil)

@@ -11,6 +11,7 @@ import UIKit
 final class ImageCell: UITableViewCell {
 
     @IBOutlet weak var icon: UIImageView!
+    private var spinner:SpinnerView!
     private var workItem: DispatchWorkItem?
     private let queue = DispatchQueue(label: "download")
     private var data: Data?
@@ -19,18 +20,26 @@ final class ImageCell: UITableViewCell {
         workItem?.cancel()
     }
     
+    override func awakeFromNib() {
+        spinner = SpinnerView(frame: self.bounds)
+        addSubview(spinner)
+    }
+    
 }
 
 extension ImageCell {
     
     func configure (_ adress: String) {
+        spinner.activity.startAnimating()
+        bringSubviewToFront(spinner)
         workItem = DispatchWorkItem( block: { [weak self] in
             URL(string: adress).flatMap({ url in
                 guard let data = try? Data(contentsOf: url) else {return}
                 DispatchQueue.main.async {
                     self?.icon.image = UIImage(data: data)
+                    self?.spinner.activity.stopAnimating()
+                    self?.sendSubviewToBack((self?.spinner)!)
                 }
-                //to do cash
             })
         })
         workItem.flatMap{queue.async(execute: $0)}

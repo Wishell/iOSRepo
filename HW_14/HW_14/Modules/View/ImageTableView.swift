@@ -47,7 +47,7 @@ extension ImageTableView: ImageTableViewInput {
     }
     
     func stopISpinner (){
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             self.spinner.activity.stopAnimating()
             self.sendSubviewToBack(self.spinner)
         }
