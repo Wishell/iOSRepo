@@ -29,6 +29,8 @@
 		483FF98C21A5688900C11CD0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF98B21A5688900C11CD0 /* Resource.swift */; };
 		483FF98E21A568AB00C11CD0 /* GenericResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF98D21A568AB00C11CD0 /* GenericResult.swift */; };
 		483FF99121A5690F00C11CD0 /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF99021A5690F00C11CD0 /* URLRequest+Resource.swift */; };
+		483FF99421A56A7900C11CD0 /* Spinner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483FF99221A56A7900C11CD0 /* Spinner.xib */; };
+		483FF99521A56A7900C11CD0 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FF99321A56A7900C11CD0 /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		483FF98B21A5688900C11CD0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		483FF98D21A568AB00C11CD0 /* GenericResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResult.swift; sourceTree = "<group>"; };
 		483FF99021A5690F00C11CD0 /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
+		483FF99221A56A7900C11CD0 /* Spinner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Spinner.xib; sourceTree = "<group>"; };
+		483FF99321A56A7900C11CD0 /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,8 @@
 		483FF98321A4A55100C11CD0 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				483FF99221A56A7900C11CD0 /* Spinner.xib */,
+				483FF99321A56A7900C11CD0 /* SpinnerView.swift */,
 				483FF98421A4A57200C11CD0 /* ImageCell.swift */,
 				483FF98521A4A57200C11CD0 /* ImageCell.xib */,
 			);
@@ -341,6 +347,7 @@
 				483FF92421A4866E00C11CD0 /* LaunchScreen.storyboard in Resources */,
 				483FF98721A4A57200C11CD0 /* ImageCell.xib in Resources */,
 				483FF92121A4866E00C11CD0 /* Assets.xcassets in Resources */,
+				483FF99421A56A7900C11CD0 /* Spinner.xib in Resources */,
 				483FF91F21A4866B00C11CD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +381,7 @@
 				483FF91A21A4866B00C11CD0 /* AppDelegate.swift in Sources */,
 				483FF98021A48EC000C11CD0 /* APIClient.swift in Sources */,
 				483FF98221A4A3FB00C11CD0 /* DataSource.swift in Sources */,
+				483FF99521A56A7900C11CD0 /* SpinnerView.swift in Sources */,
 				483FF96A21A48C1F00C11CD0 /* ImageTableModelOutput.swift in Sources */,
 				483FF97121A48C1F00C11CD0 /* ImageTableModuleConfigurator.swift in Sources */,
 				483FF97E21A48EAC00C11CD0 /* Repository.swift in Sources */,
