@@ -11,11 +11,11 @@ import Foundation
 final class ImageTableModel: ImageTableModelInput {
     
     weak var output: ImageTableModelOutput!
-    var repository: Repository = Repository(apiClient: APIClient())
+    var repository: Repository = Repository(apiClient: APIClient(),database: Database())
     
     func load(){
         
-        repository.getImages { (result) in
+        repository.getImages(from: .remote) { (result) in
             switch result {
             case .success(let images):
                 self.output.modelDidLoad(images)

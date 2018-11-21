@@ -8,29 +8,42 @@
 
 import Foundation
 
-final class Repository {
+enum RepositoryType {
+    case local, remote
+}
 
+final class Repository {
+    
+    private let database: Database!
     private let apiClient: APIClient!
 
-    init(apiClient: APIClient) {
+    init(apiClient: APIClient, database: Database) {
         self.apiClient = apiClient
+        self.database = database
     }
 
-    func getImages(_ completion: @escaping ((Result<[String]>) -> Void)) {
-        let resource = Resource(url: URL(string: "https://api.myjson.com/bins/b1mm6")!)
-        apiClient.load(resource) { (result) in
-            switch result {
-            case .success(let data):
-                do {
-                    let items = try JSONDecoder().decode([String].self, from: data)
-                    completion(.success(items))
-                } catch {
+    func getImages(from type: RepositoryType, _ completion: @escaping ((Result<[String]>) -> Void)) {
+        switch type{
+        case.local:
+            completion(.success(database.get()))
+        case.remote:
+            let resource = Resource(url: URL(string: "https://api.myjson.com/bins/b1mm6")!)
+            apiClient.load(resource) { (result) in
+                switch result {
+                case .success(let data):
+                    do {
+                        let items = try JSONDecoder().decode([String].self, from: data)
+                        self.database.save(adresses: items)
+                        completion(.success(items))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                case .failure(let error):
                     completion(.failure(error))
                 }
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
+
     }
 
 }
