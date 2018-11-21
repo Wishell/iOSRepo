@@ -13,10 +13,13 @@ protocol ImageTableViewInput: class {
     func prepare (_ registrate :((UITableView)->Void))
     var tableDataSource: (() -> DataSource)? { get set }
     var prepareCellHeight: ((UITableView)->Void)? {get set}
+    func startSpinner ()
+    func stopISpinner ()
 }
 
 final class ImageTableView: UIView {
     
+    @IBOutlet weak var spinner: SpinnerView!
     @IBOutlet weak var table: UITableView!
     @IBAction func OnLoadTap(_ sender: Any) {
         onLoad?()
@@ -33,7 +36,22 @@ extension ImageTableView: ImageTableViewInput {
     func prepare (_ registrate :((UITableView)->Void)){
         prepareCellHeight?(table)
         registrate(table)
-        
+    }
+    
+    func startSpinner (){
+        DispatchQueue.main.async {
+            self.spinner.activity.startAnimating()
+            self.bringSubviewToFront(self.spinner)
+        }
+
+    }
+    
+    func stopISpinner (){
+        DispatchQueue.main.sync {
+            self.spinner.activity.stopAnimating()
+            self.sendSubviewToBack(self.spinner)
+        }
+
     }
     
 }

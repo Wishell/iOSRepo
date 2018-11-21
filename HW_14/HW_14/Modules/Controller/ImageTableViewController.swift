@@ -15,8 +15,9 @@ final class ImageTableViewController: UIViewController {
     var dataSource: DataSource = DataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.onLoad = {
-            self.model.load()
+        contentView.onLoad = {[weak self] in
+            self?.contentView.startSpinner()
+            self?.model.load()
         }
         contentView.tableDataSource = { [unowned self] in return self.dataSource }
         contentView.prepareCellHeight = {table in
@@ -30,6 +31,7 @@ final class ImageTableViewController: UIViewController {
 extension ImageTableViewController: ImageTableModelOutput {
     
     func modelDidLoad(_ dataSource: [String]) {
+        self.contentView.stopISpinner()
         self.dataSource.items = dataSource
         DispatchQueue.main.sync {
     self.contentView.prepare { [unowned self] (table) in
