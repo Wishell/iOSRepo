@@ -44,8 +44,9 @@ final class Repository {
                     } catch {
                         async { completion(.failure(error)) }
                     }
-                case .failure(let error):
-                    async { completion(.failure(error)) }
+                case .failure:
+                    self.getImages(from: .local, completion)
+//                    async { completion(.failure(error)) }
                 }
             }
         }

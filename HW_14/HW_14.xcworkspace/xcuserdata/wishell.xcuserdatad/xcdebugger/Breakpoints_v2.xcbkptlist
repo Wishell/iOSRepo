@@ -26,13 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HW_14/Database/DataBase.swift"
-            timestampString = "564598317.108065"
+            timestampString = "564599791.765474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "save(adresses:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HW_14.Database.save(adresses: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "HW_14"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wishell/iOSFramework/HW_14/HW_14/Database/DataBase.swift"
+                  timestampString = "564598918.588743"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in HW_14.Database.save(adresses: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "HW_14"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wishell/iOSFramework/HW_14/HW_14/Database/DataBase.swift"
+                  timestampString = "564598918.59095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HW_14/Database/DataBaseMigrator.swift"
-            timestampString = "564598317.1098861"
+            timestampString = "564599791.7734129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -58,13 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HW_14/Database/DataBase.swift"
-            timestampString = "564598317.110018"
+            timestampString = "564599791.798474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "init(realm:)"
-            landmarkType = "7">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "Database"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HW_14/Modules/Xib/SpinnerView.swift"
-            timestampString = "564598317.110135"
+            timestampString = "564599791.799093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -90,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HW_14/Modules/Controller/ImageTableViewController.swift"
-            timestampString = "564598317.110209"
+            timestampString = "564599791.799596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -106,13 +138,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HW_14/Services/Repository.swift"
-            timestampString = "564598317.110608"
+            timestampString = "564599791.800195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "getImages(from:_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HW_14/Database/DataBase.swift"
+            timestampString = "564599791.800624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "save(adresses:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HW_14/Database/DataBase.swift"
+            timestampString = "564599791.8010271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "save(adresses:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HW_14.Database.get() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "HW_14"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wishell/iOSFramework/HW_14/HW_14/Database/DataBase.swift"
+                  timestampString = "564599792.071014"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (HW_14.Picture) -&gt; Swift.String in HW_14.Database.get() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "HW_14"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wishell/iOSFramework/HW_14/HW_14/Database/DataBase.swift"
+                  timestampString = "564599792.073886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

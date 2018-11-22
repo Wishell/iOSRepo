@@ -11,6 +11,11 @@ import RealmSwift
 
 class Picture: Object {
     @objc dynamic var adresses: String = ""
+    @objc dynamic var data: Data?
+    
+    override static func primaryKey() -> String? {
+        return "adresses"
+    }
 }
 
 final class Database {
@@ -30,6 +35,15 @@ final class Database {
         try! realm.write {
             realm.deleteAll()
             realm.add(objects)
+        }
+    }
+    
+    func save(image: Data, path: String) {
+        realm.objects(Picture.self).filter("adresses = '\(path)'").first.flatMap { picture in
+            try! realm.write {
+                picture.data = image
+                realm.add(picture, update: true)
+            }
         }
     }
     
