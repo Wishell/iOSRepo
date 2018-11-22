@@ -19,24 +19,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="170.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="34l-wk-iYg">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="34l-wk-iYg">
                         <rect key="frame" x="16" y="11" width="288" height="149"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="149" id="eK5-ec-OFc"/>
-                            <constraint firstAttribute="width" secondItem="34l-wk-iYg" secondAttribute="height" multiplier="288:149" id="tuN-Sm-5Ar"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="149" id="eK5-ec-OFc"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="9RZ-oj-HCV" customClass="SpinnerView" customModule="HW_14" customModuleProvider="target">
+                        <rect key="frame" x="135" y="60.5" width="50" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="34l-wk-iYg" secondAttribute="bottom" id="6ed-wl-mVl"/>
+                    <constraint firstItem="9RZ-oj-HCV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BYy-rY-xFh"/>
                     <constraint firstItem="34l-wk-iYg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Wl1-XH-9bI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="34l-wk-iYg" secondAttribute="trailing" id="ZUr-WB-hWI"/>
                     <constraint firstItem="34l-wk-iYg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dG3-eG-eqa"/>
+                    <constraint firstItem="9RZ-oj-HCV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dne-Tx-SFe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="icon" destination="34l-wk-iYg" id="BrC-uK-75o"/>
+                <outlet property="spinner" destination="9RZ-oj-HCV" id="0qs-6g-NIS"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="97.601199400299862"/>
         </tableViewCell>

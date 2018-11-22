@@ -10,31 +10,31 @@ import Foundation
 import RealmSwift
 
 class Picture: Object {
-    @objc dynamic var adress: String = ""
-    override static func primaryKey() -> String? {
-        return "adress"
-    }
-    
+    @objc dynamic var adresses: String = ""
 }
 
 final class Database {
     
+    let realm: Realm
+    
+    init(realm: Realm = try! Realm()) {
+        self.realm = realm
+    }
+    
     func save(adresses: [String]) {
-        let realm = try! Realm()
-        
+        let objects: [Picture] = adresses.map {
+            let object = Picture()
+            object.adresses = $0
+            return object
+        }
         try! realm.write {
-            adresses.compactMap{
-                let object = Picture()
-                object.adress = $0
-//                realm.deleteAll()
-realm.add(object, update: true)
-            }
+            realm.deleteAll()
+            realm.add(objects)
         }
     }
     
     func get() -> [String] {
-        let realm = try! Realm()
-        return realm.objects(Picture.self).map{ object in return object.adress }
+        return realm.objects(Picture.self).map { object in return object.adresses }
     }
     
 }

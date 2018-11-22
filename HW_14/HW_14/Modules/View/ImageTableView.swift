@@ -11,8 +11,7 @@ import UIKit
 protocol ImageTableViewInput: class {
     var onLoad:(()->Void)? {get set}
     func prepare (_ registrate :((UITableView)->Void))
-    var tableDataSource: (() -> DataSource)? { get set }
-    var prepareCellHeight: ((UITableView)->Void)? {get set}
+    var dataSource: DataSource? { get set }
     func startSpinner ()
     func stopISpinner ()
 }
@@ -26,32 +25,28 @@ final class ImageTableView: UIView {
     }
     
      var onLoad:(()->Void)?
-    var tableDataSource: (() -> DataSource)?
-    var prepareCellHeight: ((UITableView)->Void)?
+    var dataSource: DataSource?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        spinner.stop()
+    }
+    
 }
 
 // MARK: - ImageTableViewInput
 extension ImageTableView: ImageTableViewInput {
     
     func prepare (_ registrate :((UITableView)->Void)){
-        prepareCellHeight?(table)
         registrate(table)
     }
     
-    func startSpinner (){
-        DispatchQueue.main.async {
-            self.spinner.activity.startAnimating()
-            self.bringSubviewToFront(self.spinner)
-        }
-
+    func startSpinner() {
+        spinner.start()
     }
     
-    func stopISpinner (){
-        DispatchQueue.main.async {
-            self.spinner.activity.stopAnimating()
-            self.sendSubviewToBack(self.spinner)
-        }
-
+    func stopISpinner() {
+        spinner.stop()
     }
     
 }

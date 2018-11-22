@@ -11,7 +11,7 @@ import Foundation
 final class ImageTableModel: ImageTableModelInput {
     
     weak var output: ImageTableModelOutput!
-    var repository: Repository = Repository(apiClient: APIClient(),database: Database())
+    var repository: Repository!
     
     func load(){
         

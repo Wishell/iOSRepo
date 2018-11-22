@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 final class SpinnerView: UIView {
 
     @IBOutlet var contentView: UIView!
@@ -26,13 +27,21 @@ final class SpinnerView: UIView {
     private func commonInit() {
         Bundle.main.loadNibNamed("Spinner", owner: self, options: nil)
         addSubview(contentView)
-        contentView.bounds = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = bounds
+    }
+    
+    override var intrinsicContentSize: CGSize { return activity.frame.size }
+    
+    func start() {
         activity.startAnimating()
+    }
+    
+    func stop() {
+        activity.stopAnimating()
     }
 
 }

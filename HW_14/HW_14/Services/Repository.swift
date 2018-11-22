@@ -12,6 +12,10 @@ enum RepositoryType {
     case local, remote
 }
 
+func async(queue: DispatchQueue = .main, _ block: @escaping () -> Void) {
+    queue.async(execute: block)
+}
+
 final class Repository {
     
     private let database: Database!
@@ -33,13 +37,15 @@ final class Repository {
                 case .success(let data):
                     do {
                         let items = try JSONDecoder().decode([String].self, from: data)
-                        self.database.save(adresses: items)
-                        completion(.success(items))
+                        async {
+                            self.database.save(adresses: items)
+                            completion(.success(items))
+                        }
                     } catch {
-                        completion(.failure(error))
+                        async { completion(.failure(error)) }
                     }
                 case .failure(let error):
-                    completion(.failure(error))
+                    async { completion(.failure(error)) }
                 }
             }
         }

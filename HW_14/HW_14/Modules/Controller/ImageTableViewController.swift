@@ -13,17 +13,14 @@ final class ImageTableViewController: UIViewController {
     var model: ImageTableModelInput!
     lazy var contentView: ImageTableViewInput = { return view as! ImageTableViewInput }()
     var dataSource: DataSource = DataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.onLoad = {[weak self] in
             self?.contentView.startSpinner()
             self?.model.load()
         }
-        contentView.tableDataSource = { [unowned self] in return self.dataSource }
-        contentView.prepareCellHeight = {table in
-            table.rowHeight = UITableView.automaticDimension
-            table.estimatedRowHeight = 250
-        }
+        contentView.dataSource = dataSource
     }
 }
 
@@ -33,14 +30,12 @@ extension ImageTableViewController: ImageTableModelOutput {
     func modelDidLoad(_ dataSource: [String]) {
         self.contentView.stopISpinner()
         self.dataSource.items = dataSource
-        DispatchQueue.main.async {
-    self.contentView.prepare { [unowned self] (table) in
+        self.contentView.prepare { [unowned self] (table) in
             table.dataSource = self.dataSource
             let nib = UINib(nibName: "ImageCell", bundle: nil)
             table.register(nib, forCellReuseIdentifier: "ImageCell")
             table.reloadData()
         }
-    }
     }
     
     func modelDidFail(_ error: Error) {
