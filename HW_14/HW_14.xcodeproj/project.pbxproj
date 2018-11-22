@@ -201,7 +201,6 @@
 		483FF96121A48BEE00C11CD0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				483FF98321A4A55100C11CD0 /* Xib */,
 				483FF97221A48C2700C11CD0 /* ImageTable */,
 				483FF97321A48C3100C11CD0 /* Model */,
 				483FF97421A48C3900C11CD0 /* Controller */,
@@ -255,17 +254,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		483FF98321A4A55100C11CD0 /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-				483FF99221A56A7900C11CD0 /* Spinner.xib */,
-				483FF99321A56A7900C11CD0 /* SpinnerView.swift */,
-				483FF98421A4A57200C11CD0 /* ImageCell.swift */,
-				483FF98521A4A57200C11CD0 /* ImageCell.xib */,
-			);
-			path = Xib;
-			sourceTree = "<group>";
-		};
 		483FF98F21A568CA00C11CD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +292,10 @@
 		483FF99B21A7029200C11CD0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				483FF99221A56A7900C11CD0 /* Spinner.xib */,
+				483FF99321A56A7900C11CD0 /* SpinnerView.swift */,
+				483FF98421A4A57200C11CD0 /* ImageCell.swift */,
+				483FF98521A4A57200C11CD0 /* ImageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
