@@ -15,7 +15,7 @@ final class ImageTableModel: ImageTableModelInput {
     
     func load(){
         
-        repository.getImages(from: .local) { (result) in
+        repository.getImages(from: .remote) { (result) in
             switch result {
             case .success(let images):
                 self.output.modelDidLoad(images)

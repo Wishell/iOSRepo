@@ -12,20 +12,20 @@ import RealmSwift
 class Picture: Object {
     @objc dynamic var adresses: String = ""
     @objc dynamic var data: Data?
-    
+
     override static func primaryKey() -> String? {
         return "adresses"
     }
 }
 
 final class Database {
-    
+
     let realm: Realm
-    
+
     init(realm: Realm = try! Realm()) {
         self.realm = realm
     }
-    
+
     func save(adresses: [String]) {
         let objects: [Picture] = adresses.map {
             let object = Picture()
@@ -33,22 +33,26 @@ final class Database {
             return object
         }
         try! realm.write {
-            realm.deleteAll()
-            realm.add(objects)
-        }
-    }
-    
-    func save(image: Data, path: String) {
-        realm.objects(Picture.self).filter("adresses = '\(path)'").first.flatMap { picture in
-            try! realm.write {
-                picture.data = image
-                realm.add(picture, update: true)
+            objects.forEach {
+                realm.deleteAll()
+                realm.add($0, update: true)
             }
         }
     }
-    
+
+    func save(image: Data, path: String) {
+        DispatchQueue.main.async {
+            self.realm.objects(Picture.self).filter("adresses = '\(path)'").first.flatMap {[weak self] picture in
+                try! self?.realm.write {
+                    picture.data = image
+                    self?.realm.add(picture, update: true)
+                }
+            }
+        }
+    }
+
     func get() -> [String] {
         return realm.objects(Picture.self).map { object in return object.adresses }
     }
-    
+
 }

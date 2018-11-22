@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     struct DataBase {
-        static let version = 2
+        static let version = 1
         private init() {}
     }
     struct API {

@@ -14,8 +14,6 @@ final class ImageCell: UITableViewCell {
     @IBOutlet weak var spinner: SpinnerView!
     
     private var workItem: DispatchWorkItem?
-    private let queue = DispatchQueue(label: "download")
-    private var data: Data?
     
     override func prepareForReuse() {
         icon?.image = nil
@@ -28,16 +26,38 @@ extension ImageCell {
     
     func configure (_ adress: String) {
         spinner.start()
-        workItem = DispatchWorkItem( block: { [weak self] in
-            URL(string: adress).flatMap({ url in
+        workItem = Loader.default.load(adress) { [weak self] (image) in
+            async {
+                self?.icon.image = image
+                self?.spinner.stop()
+            }
+        }
+    }
+    
+}
+
+class Loader {
+    
+    static let `default` = Loader()
+    
+    private let database: Database
+    private let queue: DispatchQueue
+    
+    init(database: Database = Database(), queue: DispatchQueue = DispatchQueue(label: "download")) {
+        self.database = database
+        self.queue = queue
+    }
+    
+    func load(_ image: String, completion: @escaping (UIImage?) -> Void) -> DispatchWorkItem {
+        let workItem = DispatchWorkItem( block: { [weak self] in
+            URL(string: image).flatMap({ url in
                 guard let data = try? Data(contentsOf: url) else { return }
-                DispatchQueue.main.async {
-                    self?.icon.image = UIImage(data: data)
-                    self?.spinner.stop()
-                }
+                self?.database.save(image: data, path: image)
+                completion(UIImage(data: data))
             })
         })
-        workItem.flatMap { queue.async(execute: $0) }
+        queue.async(execute: workItem)
+        return workItem
     }
     
 }
