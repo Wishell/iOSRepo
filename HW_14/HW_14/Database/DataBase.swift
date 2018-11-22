@@ -52,10 +52,10 @@ final class Database {
     }
 
     func get() -> [String] {
-        return realm.objects(Picture.self).compactMap{ $0.adresses }
+        return realm.objects(Picture.self).compactMap { $0.adresses }
     }
-    
-    func getData(from image: String)-> Data {
+
+    func getData(from image: String) -> Data {
         return realm.objects(Picture.self).filter("adresses = '\(image)'").first.flatMap { return $0.data }!
     }
 

@@ -9,10 +9,10 @@
 import Foundation
 
 final class APIClient {
-    
+
     func load(_ resource: Resource, result: @escaping ((Result<Data>) -> Void)) {
         let request = URLRequest(resource)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
             guard let `data` = data else {
                 result(.failure(APIClientError.noData))
                 return
@@ -25,5 +25,5 @@ final class APIClient {
         }
         task.resume()
     }
-    
+
 }

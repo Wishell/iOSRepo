@@ -28,18 +28,18 @@ final class SpinnerView: UIView {
         Bundle.main.loadNibNamed("Spinner", owner: self, options: nil)
         addSubview(contentView)
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = bounds
     }
-    
+
     override var intrinsicContentSize: CGSize { return activity.frame.size }
-    
+
     func start() {
         activity.startAnimating()
     }
-    
+
     func stop() {
         activity.stopAnimating()
     }

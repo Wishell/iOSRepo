@@ -9,19 +9,19 @@
 import UIKit
 
 final class ImageTableModuleConfigurator {
-    
+
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
         if let viewController = viewInput as? ImageTableViewController {
             configure(viewController: viewController)
         }
     }
-    
+
     private func configure(viewController: ImageTableViewController) {
         let model = ImageTableModel()
         model.output = viewController
         model.repository = Repository(apiClient: APIClient(), database: Database())
-        
+
         viewController.model = model
     }
-    
+
 }

@@ -13,16 +13,16 @@ final class DataSource: NSObject {
 }
 
 extension DataSource: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
         cell.prepareForReuse()
         cell.configure(items[indexPath.row])
         return cell
     }
-    
+
 }

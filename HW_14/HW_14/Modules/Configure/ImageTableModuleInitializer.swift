@@ -9,12 +9,12 @@
 import UIKit
 
 final class ImageTableModuleInitializer: NSObject {
-    
+
     @IBOutlet weak var viewController: ImageTableViewController!
-    
+
     override func awakeFromNib() {
         let configurator = ImageTableModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: viewController)
     }
-    
+
 }

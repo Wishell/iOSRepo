@@ -10,15 +10,15 @@ import Foundation
 import RealmSwift
 
 final class DataBaseMigrator {
-    
+
     func migrate(to version: Int) {
         let config = Realm.Configuration(
             schemaVersion: UInt64(version),
-            migrationBlock: { migration, oldSchemaVersion in
+            migrationBlock: { _, oldSchemaVersion in
                 if (oldSchemaVersion < version) { }
         })
-        
+
         Realm.Configuration.defaultConfiguration = config
     }
-    
+
 }

@@ -9,11 +9,11 @@
 import UIKit
 
 final class ImageTableViewController: UIViewController {
-    
+
     var model: ImageTableModelInput!
     lazy var contentView: ImageTableViewInput = { return view as! ImageTableViewInput }()
     var dataSource: DataSource = DataSource()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.onLoad = {[weak self] in
@@ -26,7 +26,7 @@ final class ImageTableViewController: UIViewController {
 
 // MARK: - ImageTableModelOutput
 extension ImageTableViewController: ImageTableModelOutput {
-    
+
     func modelDidLoad(_ dataSource: [String]) {
         self.contentView.stopISpinner()
         self.dataSource.items = dataSource
@@ -37,14 +37,13 @@ extension ImageTableViewController: ImageTableModelOutput {
             table.reloadData()
         }
     }
-    
+
     func modelDidFail(_ error: Error) {
         let alert = UIAlertController(title: "Error", message: "load error: \(error.localizedDescription)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion:{ print("here we must close app") })
+        self.present(alert, animated: true, completion: { print("here we must close app") })
     }
-    
-    
+
 }
 
 // MARK: - ImageTableViewControllerInput

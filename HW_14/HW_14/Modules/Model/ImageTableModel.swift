@@ -9,12 +9,12 @@
 import Foundation
 
 final class ImageTableModel: ImageTableModelInput {
-    
+
     weak var output: ImageTableModelOutput!
     var repository: Repository!
-    
-    func load(){
-        
+
+    func load() {
+
         repository.getImages(from: .remote) { (result) in
             switch result {
             case .success(let images):
@@ -22,7 +22,7 @@ final class ImageTableModel: ImageTableModelInput {
             case .failure(let error):
                 self.output.modelDidFail(error)
             }
-            
+
         }
     }
 }

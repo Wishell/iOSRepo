@@ -17,7 +17,7 @@ func async(queue: DispatchQueue = .main, _ block: @escaping () -> Void) {
 }
 
 final class Repository {
-    
+
     private let database: Database!
     private let apiClient: APIClient!
 
@@ -27,7 +27,7 @@ final class Repository {
     }
 
     func getImages(from type: RepositoryType, _ completion: @escaping ((Result<[String]>) -> Void)) {
-        switch type{
+        switch type {
         case.local:
             async {
                 completion(.success(self.database.get()))
