@@ -33,8 +33,8 @@ final class Database {
             return object
         }
         try! realm.write {
+            realm.deleteAll()
             objects.forEach {
-                realm.deleteAll()
                 realm.add($0, update: true)
             }
         }
@@ -52,7 +52,11 @@ final class Database {
     }
 
     func get() -> [String] {
-        return realm.objects(Picture.self).map { object in return object.adresses }
+        return realm.objects(Picture.self).compactMap{ $0.adresses }
+    }
+    
+    func getData(from image: String)-> Data {
+        return realm.objects(Picture.self).filter("adresses = '\(image)'").first.flatMap { return $0.data }!
     }
 
 }

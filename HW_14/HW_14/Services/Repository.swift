@@ -29,7 +29,9 @@ final class Repository {
     func getImages(from type: RepositoryType, _ completion: @escaping ((Result<[String]>) -> Void)) {
         switch type{
         case.local:
-            completion(.success(database.get()))
+            async {
+                completion(.success(self.database.get()))
+            }
         case.remote:
             let resource = Resource(url: URL(string: "https://api.myjson.com/bins/b1mm6")!)
             apiClient.load(resource) { (result) in
