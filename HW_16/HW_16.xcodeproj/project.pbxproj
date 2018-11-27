@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4894969021ADB56F001B8E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894968F21ADB56F001B8E0A /* AppDelegate.swift */; };
-		4894969221ADB56F001B8E0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894969121ADB56F001B8E0A /* ViewController.swift */; };
 		4894969521ADB56F001B8E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4894969321ADB56F001B8E0A /* Main.storyboard */; };
 		4894969721ADB571001B8E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4894969621ADB571001B8E0A /* Assets.xcassets */; };
 		4894969A21ADB571001B8E0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4894969821ADB571001B8E0A /* LaunchScreen.storyboard */; };
 		489496A521ADB571001B8E0A /* HW_16Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496A421ADB571001B8E0A /* HW_16Tests.swift */; };
 		489496B021ADB571001B8E0A /* HW_16UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496AF21ADB571001B8E0A /* HW_16UITests.swift */; };
+		489496C721ADB6C0001B8E0A /* ProfileModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496BF21ADB6C0001B8E0A /* ProfileModelOutput.swift */; };
+		489496C821ADB6C0001B8E0A /* ProfileViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C021ADB6C0001B8E0A /* ProfileViewControllerInput.swift */; };
+		489496C921ADB6C0001B8E0A /* ProfileModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C121ADB6C0001B8E0A /* ProfileModuleInitializer.swift */; };
+		489496CA21ADB6C0001B8E0A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C221ADB6C0001B8E0A /* ProfileViewController.swift */; };
+		489496CB21ADB6C0001B8E0A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C321ADB6C0001B8E0A /* ProfileView.swift */; };
+		489496CC21ADB6C0001B8E0A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C421ADB6C0001B8E0A /* ProfileModel.swift */; };
+		489496CD21ADB6C0001B8E0A /* ProfileModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C521ADB6C0001B8E0A /* ProfileModelInput.swift */; };
+		489496CE21ADB6C0001B8E0A /* ProfileModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C621ADB6C0001B8E0A /* ProfileModuleConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,6 @@
 /* Begin PBXFileReference section */
 		4894968C21ADB56F001B8E0A /* HW_16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4894968F21ADB56F001B8E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4894969121ADB56F001B8E0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4894969421ADB56F001B8E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4894969621ADB571001B8E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4894969921ADB571001B8E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,14 @@
 		489496AB21ADB571001B8E0A /* HW_16UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HW_16UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		489496AF21ADB571001B8E0A /* HW_16UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_16UITests.swift; sourceTree = "<group>"; };
 		489496B121ADB571001B8E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		489496BF21ADB6C0001B8E0A /* ProfileModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelOutput.swift; sourceTree = "<group>"; };
+		489496C021ADB6C0001B8E0A /* ProfileViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerInput.swift; sourceTree = "<group>"; };
+		489496C121ADB6C0001B8E0A /* ProfileModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleInitializer.swift; sourceTree = "<group>"; };
+		489496C221ADB6C0001B8E0A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		489496C321ADB6C0001B8E0A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		489496C421ADB6C0001B8E0A /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		489496C521ADB6C0001B8E0A /* ProfileModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelInput.swift; sourceTree = "<group>"; };
+		489496C621ADB6C0001B8E0A /* ProfileModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +111,8 @@
 		4894968E21ADB56F001B8E0A /* HW_16 */ = {
 			isa = PBXGroup;
 			children = (
+				489496BD21ADB6A3001B8E0A /* Modules */,
 				4894968F21ADB56F001B8E0A /* AppDelegate.swift */,
-				4894969121ADB56F001B8E0A /* ViewController.swift */,
 				4894969321ADB56F001B8E0A /* Main.storyboard */,
 				4894969621ADB571001B8E0A /* Assets.xcassets */,
 				4894969821ADB571001B8E0A /* LaunchScreen.storyboard */,
@@ -123,6 +137,61 @@
 				489496B121ADB571001B8E0A /* Info.plist */,
 			);
 			path = HW_16UITests;
+			sourceTree = "<group>";
+		};
+		489496BD21ADB6A3001B8E0A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				489496BE21ADB6AC001B8E0A /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		489496BE21ADB6AC001B8E0A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				489496CF21ADB6D2001B8E0A /* Model */,
+				489496D021ADB6DA001B8E0A /* Controller */,
+				489496D221ADB6EA001B8E0A /* Configurator */,
+				489496D121ADB6E1001B8E0A /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		489496CF21ADB6D2001B8E0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				489496BF21ADB6C0001B8E0A /* ProfileModelOutput.swift */,
+				489496C421ADB6C0001B8E0A /* ProfileModel.swift */,
+				489496C521ADB6C0001B8E0A /* ProfileModelInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		489496D021ADB6DA001B8E0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				489496C021ADB6C0001B8E0A /* ProfileViewControllerInput.swift */,
+				489496C221ADB6C0001B8E0A /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		489496D121ADB6E1001B8E0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				489496C321ADB6C0001B8E0A /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		489496D221ADB6EA001B8E0A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				489496C121ADB6C0001B8E0A /* ProfileModuleInitializer.swift */,
+				489496C621ADB6C0001B8E0A /* ProfileModuleConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4894969221ADB56F001B8E0A /* ViewController.swift in Sources */,
+				489496C921ADB6C0001B8E0A /* ProfileModuleInitializer.swift in Sources */,
+				489496CC21ADB6C0001B8E0A /* ProfileModel.swift in Sources */,
+				489496C821ADB6C0001B8E0A /* ProfileViewControllerInput.swift in Sources */,
+				489496CA21ADB6C0001B8E0A /* ProfileViewController.swift in Sources */,
+				489496CD21ADB6C0001B8E0A /* ProfileModelInput.swift in Sources */,
+				489496C721ADB6C0001B8E0A /* ProfileModelOutput.swift in Sources */,
+				489496CB21ADB6C0001B8E0A /* ProfileView.swift in Sources */,
+				489496CE21ADB6C0001B8E0A /* ProfileModuleConfigurator.swift in Sources */,
 				4894969021ADB56F001B8E0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
