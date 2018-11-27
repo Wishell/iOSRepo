@@ -10,7 +10,12 @@ import UIKit
 
 protocol ProfileViewInput: class {}
 
-final class ProfileView: UIView {}
+final class ProfileView: UIView {
+    
+    @IBOutlet weak var avatar: UIImageView!
+    @IBAction func getProfile(_ sender: Any) {
+    }
+}
 
 // MARK: - ProfileViewInput
 extension ProfileView: ProfileViewInput {}
