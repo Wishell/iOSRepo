@@ -9,7 +9,7 @@
 import Foundation
 
 final class ProfileModel: ProfileModelInput {
-    
+
     weak var output: ProfileModelOutput!
-    
+
 }

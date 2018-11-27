@@ -8,14 +8,32 @@
 
 import UIKit
 
-protocol ProfileViewInput: class {}
+protocol ProfileViewInput: class {
+
+    func hideButton()
+    var getPicture: (() -> Void)? {get set}
+    func setPicture(_ picture: UIImage)
+}
 
 final class ProfileView: UIView {
-    
+
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var avatar: UIImageView!
-    @IBAction func getProfile(_ sender: Any) {
+    @IBAction func getAvatar(_ sender: Any) {
+        getPicture?()
     }
+    var getPicture: (() -> Void)?
 }
 
 // MARK: - ProfileViewInput
-extension ProfileView: ProfileViewInput {}
+extension ProfileView: ProfileViewInput {
+
+    func hideButton() {
+        button.isHidden = true
+    }
+    func setPicture(_ picture: UIImage) {
+        avatar.image = picture
+        hideButton()
+    }
+
+}

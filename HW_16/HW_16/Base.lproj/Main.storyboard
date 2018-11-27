@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="HW_16" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,14 +32,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getProfile:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="gNt-2r-mA1"/>
+                                    <action selector="getAvatar:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="zq3-w6-QBw"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKv-qO-JOr">
                                 <rect key="frame" x="32" y="52" width="311" height="491"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.89519137140000005" green="0.73914551802586503" blue="0.83324136368682744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.20452901514173233" green="0.89519137140000005" blue="0.52524579720982334" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WKv-qO-JOr" secondAttribute="trailing" constant="32" id="0pI-FZ-O0g"/>
                             <constraint firstItem="WKv-qO-JOr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="9ln-04-JGT"/>
@@ -51,11 +51,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outlet property="avatar" destination="WKv-qO-JOr" id="Sqm-E6-Y2k"/>
+                            <outlet property="button" destination="aTn-ge-SBY" id="lcv-oU-qsm"/>
                         </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="xfr-ec-79w" customClass="ProfileModuleInitializer" customModule="HW_16" customModuleProvider="target"/>
+                <customObject id="xfr-ec-79w" customClass="ProfileModuleInitializer" customModule="HW_16" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="nfq-zS-7ed"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>

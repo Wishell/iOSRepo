@@ -9,18 +9,18 @@
 import UIKit
 
 final class ProfileModuleConfigurator {
-    
+
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
         if let viewController = viewInput as? ProfileViewController {
             configure(viewController: viewController)
         }
     }
-    
+
     private func configure(viewController: ProfileViewController) {
         let model = ProfileModel()
         model.output = viewController
-        
+        viewController.picker = UIImagePickerController()
         viewController.model = model
     }
-    
+
 }
