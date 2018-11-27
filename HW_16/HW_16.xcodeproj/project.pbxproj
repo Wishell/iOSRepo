@@ -23,6 +23,11 @@
 		489496CE21ADB6C0001B8E0A /* ProfileModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496C621ADB6C0001B8E0A /* ProfileModuleConfigurator.swift */; };
 		489496D721ADE229001B8E0A /* ProfileViewController + UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496D621ADE229001B8E0A /* ProfileViewController + UIImagePickerControllerDelegate.swift */; };
 		489496D921ADE290001B8E0A /* ProfileViewController + UINavigationControllerDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496D821ADE290001B8E0A /* ProfileViewController + UINavigationControllerDelegate .swift */; };
+		489496DB21ADE48F001B8E0A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496DA21ADE48F001B8E0A /* Repository.swift */; };
+		489496DE21ADE50F001B8E0A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496DD21ADE50F001B8E0A /* ApiClient.swift */; };
+		489496E121ADE55E001B8E0A /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E021ADE55E001B8E0A /* Resource.swift */; };
+		489496E321ADE5A3001B8E0A /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E221ADE5A3001B8E0A /* Results.swift */; };
+		489496E521ADE638001B8E0A /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E421ADE638001B8E0A /* URLRequest+Resource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		489496C621ADB6C0001B8E0A /* ProfileModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleConfigurator.swift; sourceTree = "<group>"; };
 		489496D621ADE229001B8E0A /* ProfileViewController + UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
 		489496D821ADE290001B8E0A /* ProfileViewController + UINavigationControllerDelegate .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + UINavigationControllerDelegate .swift"; sourceTree = "<group>"; };
+		489496DA21ADE48F001B8E0A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		489496DD21ADE50F001B8E0A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		489496E021ADE55E001B8E0A /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		489496E221ADE5A3001B8E0A /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		489496E421ADE638001B8E0A /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,8 @@
 		4894968E21ADB56F001B8E0A /* HW_16 */ = {
 			isa = PBXGroup;
 			children = (
+				489496DF21ADE54D001B8E0A /* Types */,
+				489496DC21ADE4FF001B8E0A /* Services */,
 				489496D521ADE1F6001B8E0A /* Extensions */,
 				489496BD21ADB6A3001B8E0A /* Modules */,
 				4894968F21ADB56F001B8E0A /* AppDelegate.swift */,
@@ -204,8 +216,27 @@
 			children = (
 				489496D621ADE229001B8E0A /* ProfileViewController + UIImagePickerControllerDelegate.swift */,
 				489496D821ADE290001B8E0A /* ProfileViewController + UINavigationControllerDelegate .swift */,
+				489496E421ADE638001B8E0A /* URLRequest+Resource.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		489496DC21ADE4FF001B8E0A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				489496DA21ADE48F001B8E0A /* Repository.swift */,
+				489496DD21ADE50F001B8E0A /* ApiClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		489496DF21ADE54D001B8E0A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				489496E021ADE55E001B8E0A /* Resource.swift */,
+				489496E221ADE5A3001B8E0A /* Results.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,14 +373,19 @@
 				489496C921ADB6C0001B8E0A /* ProfileModuleInitializer.swift in Sources */,
 				489496CC21ADB6C0001B8E0A /* ProfileModel.swift in Sources */,
 				489496C821ADB6C0001B8E0A /* ProfileViewControllerInput.swift in Sources */,
+				489496E521ADE638001B8E0A /* URLRequest+Resource.swift in Sources */,
 				489496CA21ADB6C0001B8E0A /* ProfileViewController.swift in Sources */,
 				489496D921ADE290001B8E0A /* ProfileViewController + UINavigationControllerDelegate .swift in Sources */,
 				489496D721ADE229001B8E0A /* ProfileViewController + UIImagePickerControllerDelegate.swift in Sources */,
 				489496CD21ADB6C0001B8E0A /* ProfileModelInput.swift in Sources */,
 				489496C721ADB6C0001B8E0A /* ProfileModelOutput.swift in Sources */,
+				489496DE21ADE50F001B8E0A /* ApiClient.swift in Sources */,
+				489496E321ADE5A3001B8E0A /* Results.swift in Sources */,
 				489496CB21ADB6C0001B8E0A /* ProfileView.swift in Sources */,
 				489496CE21ADB6C0001B8E0A /* ProfileModuleConfigurator.swift in Sources */,
 				4894969021ADB56F001B8E0A /* AppDelegate.swift in Sources */,
+				489496DB21ADE48F001B8E0A /* Repository.swift in Sources */,
+				489496E121ADE55E001B8E0A /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

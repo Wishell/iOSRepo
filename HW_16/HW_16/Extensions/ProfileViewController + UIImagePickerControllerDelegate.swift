@@ -15,7 +15,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate {
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        if let image: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let image: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             contentView.setPicture(image)
         }
         dismiss(animated: true, completion: nil)

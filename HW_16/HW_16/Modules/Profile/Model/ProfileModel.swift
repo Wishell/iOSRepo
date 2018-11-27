@@ -11,5 +11,9 @@ import Foundation
 final class ProfileModel: ProfileModelInput {
 
     weak var output: ProfileModelOutput!
-
+    var repository: Repository!
+    
+    func load(_ data: Data) {
+        
+    }
 }

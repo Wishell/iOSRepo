@@ -21,11 +21,13 @@ final class ProfileViewController: UIViewController {
             let actionSheet = UIAlertController(title: "Choose source", message: nil, preferredStyle: .actionSheet)
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 actionSheet.addAction(UIAlertAction(title: "Camera", style: .destructive, handler: { (_) in
+                    self?.picker.allowsEditing = true
                     self?.showPicker(.camera)
                 }))
             }
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (_) in
+                    self?.picker.allowsEditing = true
                     self?.showPicker(.photoLibrary)
                 }))
             }
