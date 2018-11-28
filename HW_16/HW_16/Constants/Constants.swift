@@ -13,12 +13,14 @@ struct Constants {
     struct API {
         static let urlPostAdress: String = "https://jsonplaceholder.typicode.com/posts"
         static let headerKey: String = "Content-Type"
-        static let headerValue: String = "application/json"
+        static let mimeJson: String = "application/json"
+        static let mimeHtml: String = "application/html"
         private init () {}
     }
     
     struct Defaults {
     static let siteName = "https://vialyx.com"
+        
     }
     
     private init() {}

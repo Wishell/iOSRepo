@@ -10,8 +10,8 @@ import UIKit
 import WebKit
 
 class WebView: UIViewController {
+    
 var webView: WKWebView!
-
 
     override func loadView() {
         webView = WKWebView()
@@ -23,13 +23,8 @@ var webView: WKWebView!
         super.viewDidLoad()
         let url = URL(string: Constants.Defaults.siteName)!
         guard let data = Defaults.getData(for: Constants.Defaults.siteName) else {return}
-        webView.load(data, mimeType: "application/html", characterEncodingName: "UTF-8", baseURL: url)
+        webView.load(data, mimeType: Constants.API.mimeHtml, characterEncodingName: "UTF-8", baseURL: url)
         webView.allowsBackForwardNavigationGestures = true
-        
     }
-    
-
-
-
 
 }

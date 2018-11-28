@@ -14,7 +14,7 @@ extension URLRequest {
         self.init(url: resource.url)
         self.httpMethod = resource.method
         self.httpBody = resource.body
-        updateHeader(key: Constants.API.headerKey, value: Constants.API.headerValue)
+        updateHeader(key: Constants.API.headerKey, value: Constants.API.mimeJson)
     }
 
     private mutating func updateHeader(key: String, value: String) {
