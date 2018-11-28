@@ -12,8 +12,7 @@ struct Resource {
     let url: URL
     let method: String = "POST"
     let body: Data
-    let headerKey: String = "Content-Type"
-    let headerValue: String = "application/json"
+
 }
 
 struct Post: Codable {
