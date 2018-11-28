@@ -8,13 +8,13 @@
 
 import UIKit
 import WebKit
+import UserNotifications
 
 final class ProfileViewController: UIViewController {
 
     var model: ProfileModelInput!
     lazy var contentView: ProfileViewInput = { return view as! ProfileViewInput }()
     var picker: UIImagePickerController!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +57,10 @@ extension ProfileViewController: ProfileModelOutput {
         self.present(alert, animated: true, completion: nil)
     }
 
-    
     func modelDidLoad() {
-        
+
     }
-    
+
 }
 
 // MARK: - ProfileViewControllerInput

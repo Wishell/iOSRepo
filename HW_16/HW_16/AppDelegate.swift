@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,26 +17,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) {
+            granted, error in
+            if granted {
+                print("Approval granted to send notifications")
+            } else {
+                print(error!)
+            }
+        }
+        
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
     }
 
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        // Create url which from we will get fresh data
         if let url = URL(string: Constants.Defaults.siteName) {
-            // Send request
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, respone, error) in
-                // Check Data
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 guard let `data` = data else { completionHandler(.failed); return }
-                // Get result from data
-                let result = String(data: data, encoding: .utf8)
                 Defaults.setData(for: Constants.Defaults.siteName, data: data)
-                print("performFetchWithCompletionHandler result: \(String(describing: result))")
-                // Call background fetch completion with .newData result
+                
+                
+                self.scheduleLocalNotification()
                 completionHandler(.newData)
             }).resume()
         }
     }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

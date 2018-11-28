@@ -12,15 +12,15 @@ final class ProfileModel: ProfileModelInput {
 
     weak var output: ProfileModelOutput!
     var repository: Repository!
-    
+
     func load(_ data: Data) {
         let post = Post(userId: 789, id: 123, title: "image", body: data.base64EncodedString() )
         repository.postPhoto(post) { (result) in
             switch result {
-            case .success(_):
+            case .success:
                 //output.modelDidLoad
                 print("Success")
-                
+
             case .failure(let error):
                 self.output.modelDidFail(error: error)
                 print("Failure")

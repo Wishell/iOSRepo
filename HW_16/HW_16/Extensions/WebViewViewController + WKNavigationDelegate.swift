@@ -9,6 +9,4 @@
 import Foundation
 import WebKit
 
-extension WebView: WKNavigationDelegate {
-    
-}
+extension WebView: WKNavigationDelegate { }

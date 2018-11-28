@@ -22,6 +22,7 @@ final class ImageTableViewController: UIViewController {
         }
         contentView.dataSource = dataSource
     }
+    
 }
 
 // MARK: - ImageTableModelOutput

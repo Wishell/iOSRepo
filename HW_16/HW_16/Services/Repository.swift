@@ -11,7 +11,7 @@ import Foundation
 final class Repository {
 
     private let apiClient: APIClient!
-    
+
     init(apiClient: APIClient) {
         self.apiClient = apiClient
     }

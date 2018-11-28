@@ -38,7 +38,7 @@ extension ProfileView: ProfileViewInput {
     func hideButton() {
         button.isHidden = true
     }
-    
+
     func setPicture(_ picture: UIImage) {
         avatar.image = picture
         hideButton()

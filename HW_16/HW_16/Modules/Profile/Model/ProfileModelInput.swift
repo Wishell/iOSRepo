@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProfileModelInput {
-    
+
     func load(_ data: Data)
-    
+
 }
