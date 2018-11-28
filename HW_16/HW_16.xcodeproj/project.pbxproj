@@ -28,6 +28,7 @@
 		489496E121ADE55E001B8E0A /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E021ADE55E001B8E0A /* Resource.swift */; };
 		489496E321ADE5A3001B8E0A /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E221ADE5A3001B8E0A /* Results.swift */; };
 		489496E521ADE638001B8E0A /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E421ADE638001B8E0A /* URLRequest+Resource.swift */; };
+		489496E821AECBE7001B8E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E721AECBE7001B8E0A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		489496E021ADE55E001B8E0A /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		489496E221ADE5A3001B8E0A /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		489496E421ADE638001B8E0A /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
+		489496E721AECBE7001B8E0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		4894968E21ADB56F001B8E0A /* HW_16 */ = {
 			isa = PBXGroup;
 			children = (
+				489496E621AECBC9001B8E0A /* Constants */,
 				489496DF21ADE54D001B8E0A /* Types */,
 				489496DC21ADE4FF001B8E0A /* Services */,
 				489496D521ADE1F6001B8E0A /* Extensions */,
@@ -239,6 +242,14 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
+		489496E621AECBC9001B8E0A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				489496E721AECBE7001B8E0A /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +318,11 @@
 				TargetAttributes = {
 					4894968B21ADB56F001B8E0A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4894969F21ADB571001B8E0A = {
 						CreatedOnToolsVersion = 10.1;
@@ -371,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				489496C921ADB6C0001B8E0A /* ProfileModuleInitializer.swift in Sources */,
+				489496E821AECBE7001B8E0A /* Constants.swift in Sources */,
 				489496CC21ADB6C0001B8E0A /* ProfileModel.swift in Sources */,
 				489496C821ADB6C0001B8E0A /* ProfileViewControllerInput.swift in Sources */,
 				489496E521ADE638001B8E0A /* URLRequest+Resource.swift in Sources */,

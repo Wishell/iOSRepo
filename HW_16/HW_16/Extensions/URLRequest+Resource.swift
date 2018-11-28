@@ -13,6 +13,14 @@ extension URLRequest {
     init(_ resource: Resource) {
         self.init(url: resource.url)
         self.httpMethod = resource.method
+        self.httpBody = resource.body
+        updateHeader(key: resource.headerKey, value: resource.headerValue)
+    }
+
+    private mutating func updateHeader(key: String, value: String) {
+        var headers = self.allHTTPHeaderFields ?? [:]
+        headers[key] = value
+        self.allHTTPHeaderFields = headers
     }
     
 }

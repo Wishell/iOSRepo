@@ -11,4 +11,14 @@ import Foundation
 struct Resource {
     let url: URL
     let method: String = "POST"
+    let body: Data
+    let headerKey: String = "Content-Type"
+    let headerValue: String = "application/json"
+}
+
+struct Post: Codable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
 }

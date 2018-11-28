@@ -19,6 +19,7 @@ final class ProfileModuleConfigurator {
     private func configure(viewController: ProfileViewController) {
         let model = ProfileModel()
         model.output = viewController
+        model.repository = Repository(apiClient: APIClient())
         viewController.picker = UIImagePickerController()
         viewController.model = model
     }

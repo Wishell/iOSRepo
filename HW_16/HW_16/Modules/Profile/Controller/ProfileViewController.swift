@@ -16,8 +16,10 @@ final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        contentView.getPicture = {[weak self] in
+        contentView.post = {[weak self] data in
+                self?.model.load(data)
+        }
+        contentView.getPicture = { [weak self] in
             let actionSheet = UIAlertController(title: "Choose source", message: nil, preferredStyle: .actionSheet)
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 actionSheet.addAction(UIAlertAction(title: "Camera", style: .destructive, handler: { (_) in
@@ -46,7 +48,21 @@ final class ProfileViewController: UIViewController {
 }
 
 // MARK: - ProfileModelOutput
-extension ProfileViewController: ProfileModelOutput {}
+extension ProfileViewController: ProfileModelOutput {
+    func modelDidFail(error: Error?) {
+        let alert = UIAlertController(title: "Error", message: "load error: \(String(describing: error))", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    
+    func modelDidLoad() {
+        
+    }
+    
+}
 
 // MARK: - ProfileViewControllerInput
 extension ProfileViewController: ProfileViewControllerInput {}
+
+// model.load()
