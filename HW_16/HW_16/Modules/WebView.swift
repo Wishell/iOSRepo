@@ -22,7 +22,10 @@ var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string: Constants.Defaults.siteName)!
-        guard let data = Defaults.getData(for: Constants.Defaults.siteName) else {return}
+        let database = DataBase()
+        
+        //guard let data = database.load()Defaults.getData(for: Constants.Defaults.siteName) else {return}
+        let data = database.get() 
         webView.load(data, mimeType: Constants.API.mimeHtml, characterEncodingName: "UTF-8", baseURL: url)
         webView.allowsBackForwardNavigationGestures = true
     }

@@ -37,7 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 guard let `data` = data else { completionHandler(.failed); return }
                 Defaults.setData(for: Constants.Defaults.siteName, data: data)
-                
+                let database = DataBase()
+                database.save(data: data)
                 
                 self.scheduleLocalNotification()
                 completionHandler(.newData)
