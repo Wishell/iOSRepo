@@ -64,6 +64,11 @@ extension ProfileViewController: ProfileModelOutput {
 }
 
 // MARK: - ProfileViewControllerInput
-extension ProfileViewController: ProfileViewControllerInput {}
+extension ProfileViewController: ProfileViewControllerInput {
 
-// model.load()
+    func saveData (data: Data ) {
+        
+    }
+
+}
+

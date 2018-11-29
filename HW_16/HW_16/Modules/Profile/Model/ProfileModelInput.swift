@@ -10,5 +10,6 @@ import Foundation
 protocol ProfileModelInput {
 
     func load(_ data: Data)
+    func save2DB (_ data: Data)
 
 }

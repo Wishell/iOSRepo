@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
-        
+
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) {
             granted, error in
             if granted {
@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error!)
             }
         }
-        
+
         UNUserNotificationCenter.current().delegate = self
-        
+
         return true
     }
 
@@ -36,10 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let url = URL(string: Constants.Defaults.siteName) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, _, _) in
                 guard let `data` = data else { completionHandler(.failed); return }
-                Defaults.setData(for: Constants.Defaults.siteName, data: data)
-                let database = DataBase()
-                database.save(data: data)
-                
+
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewControllerInput
+                controller.saveData(data: data)
                 self.scheduleLocalNotification()
                 completionHandler(.newData)
             }).resume()

@@ -31,10 +31,18 @@
 		489496E521ADE638001B8E0A /* URLRequest+Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E421ADE638001B8E0A /* URLRequest+Resource.swift */; };
 		489496E821AECBE7001B8E0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496E721AECBE7001B8E0A /* Constants.swift */; };
 		489496EB21AF087C001B8E0A /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489496EA21AF087C001B8E0A /* Defaults.swift */; };
-		4894970221AF2662001B8E0A /* WebViewViewController + WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894970121AF2662001B8E0A /* WebViewViewController + WKNavigationDelegate.swift */; };
-		4894970421AF2FD3001B8E0A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894970321AF2FD3001B8E0A /* WebView.swift */; };
 		4894970721AF3AA5001B8E0A /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894970621AF3AA5001B8E0A /* DataBase.swift */; };
 		4894970921AF3EE3001B8E0A /* AppDelegate + UserNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894970821AF3EE3001B8E0A /* AppDelegate + UserNotificationDelegate.swift */; };
+		4894970B21AF4C36001B8E0A /* DataHolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894970A21AF4C36001B8E0A /* DataHolderType.swift */; };
+		4894971721AFB4EF001B8E0A /* BrowserModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894970F21AFB4EF001B8E0A /* BrowserModelOutput.swift */; };
+		4894971821AFB4EF001B8E0A /* BrowserViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971021AFB4EF001B8E0A /* BrowserViewControllerInput.swift */; };
+		4894971921AFB4EF001B8E0A /* BrowserModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971121AFB4EF001B8E0A /* BrowserModuleInitializer.swift */; };
+		4894971A21AFB4EF001B8E0A /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971221AFB4EF001B8E0A /* BrowserViewController.swift */; };
+		4894971B21AFB4EF001B8E0A /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971321AFB4EF001B8E0A /* BrowserView.swift */; };
+		4894971C21AFB4EF001B8E0A /* BrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971421AFB4EF001B8E0A /* BrowserModel.swift */; };
+		4894971D21AFB4EF001B8E0A /* BrowserModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971521AFB4EF001B8E0A /* BrowserModelInput.swift */; };
+		4894971E21AFB4EF001B8E0A /* BrowserModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894971621AFB4EF001B8E0A /* BrowserModuleConfigurator.swift */; };
+		4894972521AFD7AA001B8E0A /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894972421AFD7AA001B8E0A /* DataHolder.swift */; };
 		5DA4EC0FE4DB0C34EE28B2E9 /* Pods_HW_16Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49231EB329759DE12C543468 /* Pods_HW_16Tests.framework */; };
 		FC237D4D266BE6C2B1599F28 /* Pods_HW_16UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE5D46F3115FC7A160A736B /* Pods_HW_16UITests.framework */; };
 /* End PBXBuildFile section */
@@ -88,10 +96,18 @@
 		489496E421ADE638001B8E0A /* URLRequest+Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Resource.swift"; sourceTree = "<group>"; };
 		489496E721AECBE7001B8E0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		489496EA21AF087C001B8E0A /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		4894970121AF2662001B8E0A /* WebViewViewController + WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebViewViewController + WKNavigationDelegate.swift"; sourceTree = "<group>"; };
-		4894970321AF2FD3001B8E0A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		4894970621AF3AA5001B8E0A /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		4894970821AF3EE3001B8E0A /* AppDelegate + UserNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate + UserNotificationDelegate.swift"; sourceTree = "<group>"; };
+		4894970A21AF4C36001B8E0A /* DataHolderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolderType.swift; sourceTree = "<group>"; };
+		4894970F21AFB4EF001B8E0A /* BrowserModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModelOutput.swift; sourceTree = "<group>"; };
+		4894971021AFB4EF001B8E0A /* BrowserViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewControllerInput.swift; sourceTree = "<group>"; };
+		4894971121AFB4EF001B8E0A /* BrowserModuleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModuleInitializer.swift; sourceTree = "<group>"; };
+		4894971221AFB4EF001B8E0A /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		4894971321AFB4EF001B8E0A /* BrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserView.swift; sourceTree = "<group>"; };
+		4894971421AFB4EF001B8E0A /* BrowserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModel.swift; sourceTree = "<group>"; };
+		4894971521AFB4EF001B8E0A /* BrowserModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModelInput.swift; sourceTree = "<group>"; };
+		4894971621AFB4EF001B8E0A /* BrowserModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserModuleConfigurator.swift; sourceTree = "<group>"; };
+		4894972421AFD7AA001B8E0A /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		49231EB329759DE12C543468 /* Pods_HW_16Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_16Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19C34A40F90CF3BAA05199F /* Pods-HW_16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW_16.release.xcconfig"; path = "Pods/Target Support Files/Pods-HW_16/Pods-HW_16.release.xcconfig"; sourceTree = "<group>"; };
 		B0ACB6ACC50294FC486723A9 /* Pods_HW_16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW_16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +180,7 @@
 		4894968E21ADB56F001B8E0A /* HW_16 */ = {
 			isa = PBXGroup;
 			children = (
+				4894972321AFD794001B8E0A /* DataHolder */,
 				4894970521AF3A93001B8E0A /* DataBase */,
 				489496E921AF0857001B8E0A /* UserDefaults */,
 				489496E621AECBC9001B8E0A /* Constants */,
@@ -201,8 +218,8 @@
 		489496BD21ADB6A3001B8E0A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4894970E21AFB4D8001B8E0A /* Browser */,
 				489496BE21ADB6AC001B8E0A /* Profile */,
-				4894970321AF2FD3001B8E0A /* WebView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -260,7 +277,6 @@
 				489496D621ADE229001B8E0A /* ProfileViewController + UIImagePickerControllerDelegate.swift */,
 				489496D821ADE290001B8E0A /* ProfileViewController + UINavigationControllerDelegate .swift */,
 				489496E421ADE638001B8E0A /* URLRequest+Resource.swift */,
-				4894970121AF2662001B8E0A /* WebViewViewController + WKNavigationDelegate.swift */,
 				4894970821AF3EE3001B8E0A /* AppDelegate + UserNotificationDelegate.swift */,
 			);
 			path = Extensions;
@@ -280,6 +296,7 @@
 			children = (
 				489496E021ADE55E001B8E0A /* Resource.swift */,
 				489496E221ADE5A3001B8E0A /* Results.swift */,
+				4894970A21AF4C36001B8E0A /* DataHolderType.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -306,6 +323,61 @@
 				4894970621AF3AA5001B8E0A /* DataBase.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		4894970E21AFB4D8001B8E0A /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				4894971F21AFB4FF001B8E0A /* Model */,
+				4894972021AFB50E001B8E0A /* Controller */,
+				4894972121AFB519001B8E0A /* Configurator */,
+				4894972221AFB523001B8E0A /* View */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		4894971F21AFB4FF001B8E0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4894970F21AFB4EF001B8E0A /* BrowserModelOutput.swift */,
+				4894971421AFB4EF001B8E0A /* BrowserModel.swift */,
+				4894971521AFB4EF001B8E0A /* BrowserModelInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4894972021AFB50E001B8E0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4894971021AFB4EF001B8E0A /* BrowserViewControllerInput.swift */,
+				4894971221AFB4EF001B8E0A /* BrowserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4894972121AFB519001B8E0A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				4894971121AFB4EF001B8E0A /* BrowserModuleInitializer.swift */,
+				4894971621AFB4EF001B8E0A /* BrowserModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		4894972221AFB523001B8E0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4894971321AFB4EF001B8E0A /* BrowserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4894972321AFD794001B8E0A /* DataHolder */ = {
+			isa = PBXGroup;
+			children = (
+				4894972421AFD7AA001B8E0A /* DataHolder.swift */,
+			);
+			path = DataHolder;
 			sourceTree = "<group>";
 		};
 		CACC25F94383912E76DFD3C4 /* Pods */ = {
@@ -539,11 +611,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				489496C921ADB6C0001B8E0A /* ProfileModuleInitializer.swift in Sources */,
-				4894970421AF2FD3001B8E0A /* WebView.swift in Sources */,
+				4894971A21AFB4EF001B8E0A /* BrowserViewController.swift in Sources */,
+				4894971921AFB4EF001B8E0A /* BrowserModuleInitializer.swift in Sources */,
+				4894972521AFD7AA001B8E0A /* DataHolder.swift in Sources */,
+				4894971721AFB4EF001B8E0A /* BrowserModelOutput.swift in Sources */,
+				4894970B21AF4C36001B8E0A /* DataHolderType.swift in Sources */,
 				489496E821AECBE7001B8E0A /* Constants.swift in Sources */,
+				4894971C21AFB4EF001B8E0A /* BrowserModel.swift in Sources */,
 				489496CC21ADB6C0001B8E0A /* ProfileModel.swift in Sources */,
 				4894970721AF3AA5001B8E0A /* DataBase.swift in Sources */,
-				4894970221AF2662001B8E0A /* WebViewViewController + WKNavigationDelegate.swift in Sources */,
 				489496C821ADB6C0001B8E0A /* ProfileViewControllerInput.swift in Sources */,
 				489496E521ADE638001B8E0A /* URLRequest+Resource.swift in Sources */,
 				489496CA21ADB6C0001B8E0A /* ProfileViewController.swift in Sources */,
@@ -556,9 +632,13 @@
 				489496DE21ADE50F001B8E0A /* ApiClient.swift in Sources */,
 				489496E321ADE5A3001B8E0A /* Results.swift in Sources */,
 				489496CB21ADB6C0001B8E0A /* ProfileView.swift in Sources */,
+				4894971821AFB4EF001B8E0A /* BrowserViewControllerInput.swift in Sources */,
+				4894971B21AFB4EF001B8E0A /* BrowserView.swift in Sources */,
+				4894971D21AFB4EF001B8E0A /* BrowserModelInput.swift in Sources */,
 				489496CE21ADB6C0001B8E0A /* ProfileModuleConfigurator.swift in Sources */,
 				4894969021ADB56F001B8E0A /* AppDelegate.swift in Sources */,
 				489496DB21ADE48F001B8E0A /* Repository.swift in Sources */,
+				4894971E21AFB4EF001B8E0A /* BrowserModuleConfigurator.swift in Sources */,
 				489496E121ADE55E001B8E0A /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
