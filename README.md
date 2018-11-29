@@ -1,2 +1,0 @@
-# iOSRepo
-Vyalix_iOS

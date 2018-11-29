@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vOG-p1-AM5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ky4-SW-Oi0">
+            <objects>
+                <viewController id="ZYj-R5-PoH" customClass="BrowserViewController" customModule="HW_16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vSC-MI-Wl9" customClass="BrowserView" customModule="HW_16" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rFU-vH-ZFg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="iz2-jS-zvW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTI-EW-Yla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="vgL-Bj-dk7" customClass="BrowserModuleInitializer" customModule="HW_16" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="ZYj-R5-PoH" id="8bJ-QF-p8R"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-504.80000000000001" y="1242.7286356821589"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4ja-SN-H4X">
+            <objects>
+                <tabBarController id="vOG-p1-AM5" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tiv-ld-uom">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8FO-sP-iys"/>
+                        <segue destination="ZYj-R5-PoH" kind="relationship" relationship="viewControllers" id="QUc-le-ljL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdX-14-6Qd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2090" y="672"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="BYZ-38-t0r" customClass="ProfileViewController" customModule="HW_16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ProfileView" customModule="HW_16" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSc-Tx-gtQ">
+                                <rect key="frame" x="127.5" y="526" width="120" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.89019607840000003" green="0.94901960780000005" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Post:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="Fzr-Dy-GjC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTn-ge-SBY">
+                                <rect key="frame" x="127.5" y="526" width="120" height="48"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.87058823529999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aTn-ge-SBY" secondAttribute="height" multiplier="5:2" id="Ywm-Pw-lr5"/>
+                                    <constraint firstAttribute="width" constant="120" id="rMZ-05-aiq"/>
+                                </constraints>
+                                <state key="normal" title="choose avatar"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getAvatar:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="zq3-w6-QBw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKv-qO-JOr">
+                                <rect key="frame" x="32" y="52" width="311" height="442"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20452901514173233" green="0.89519137140000005" blue="0.52524579720982334" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WKv-qO-JOr" secondAttribute="trailing" constant="32" id="0pI-FZ-O0g"/>
+                            <constraint firstItem="cSc-Tx-gtQ" firstAttribute="width" secondItem="aTn-ge-SBY" secondAttribute="width" id="7AL-wn-aY1"/>
+                            <constraint firstItem="WKv-qO-JOr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="9ln-04-JGT"/>
+                            <constraint firstItem="cSc-Tx-gtQ" firstAttribute="centerY" secondItem="aTn-ge-SBY" secondAttribute="centerY" id="EJ6-7F-Z0c"/>
+                            <constraint firstItem="aTn-ge-SBY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Evm-eO-FJz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aTn-ge-SBY" secondAttribute="bottom" constant="44" id="iL1-C3-ju8"/>
+                            <constraint firstItem="cSc-Tx-gtQ" firstAttribute="centerX" secondItem="aTn-ge-SBY" secondAttribute="centerX" id="oDf-FO-bld"/>
+                            <constraint firstItem="WKv-qO-JOr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="qPf-dM-JWY"/>
+                            <constraint firstItem="aTn-ge-SBY" firstAttribute="top" secondItem="WKv-qO-JOr" secondAttribute="bottom" constant="32" id="wqV-hK-6J2"/>
+                            <constraint firstItem="cSc-Tx-gtQ" firstAttribute="height" secondItem="aTn-ge-SBY" secondAttribute="height" id="ytl-Ot-qme"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="avatar" destination="WKv-qO-JOr" id="Sqm-E6-Y2k"/>
+                            <outlet property="button" destination="aTn-ge-SBY" id="lcv-oU-qsm"/>
+                            <outlet property="postButton" destination="cSc-Tx-gtQ" id="D4k-YV-Yqf"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Avatar Picker" id="UW0-oE-avp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="xfr-ec-79w" customClass="ProfileModuleInitializer" customModule="HW_16" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="nfq-zS-7ed"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-503" y="-175"/>
+        </scene>
+    </scenes>
+</document>
