@@ -27,9 +27,9 @@ final class ProfileModel: ProfileModelInput {
             }
         }
     }
-    
+
     func save2DB (_ data: Data) {
-        
+        repository.saveData(data)
     }
-    
+
 }

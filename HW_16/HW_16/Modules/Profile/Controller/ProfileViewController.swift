@@ -51,6 +51,7 @@ final class ProfileViewController: UIViewController {
 
 // MARK: - ProfileModelOutput
 extension ProfileViewController: ProfileModelOutput {
+
     func modelDidFail(error: Error?) {
         let alert = UIAlertController(title: "Error", message: "load error: \(String(describing: error))", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -67,8 +68,7 @@ extension ProfileViewController: ProfileModelOutput {
 extension ProfileViewController: ProfileViewControllerInput {
 
     func saveData (data: Data ) {
-        
+        model.save2DB(data)
     }
 
 }
-

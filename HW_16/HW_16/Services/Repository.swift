@@ -12,13 +12,12 @@ final class Repository {
 
     private let apiClient: APIClient!
     private let dataholder: DataHolder!
-    
-    
+
     init(apiClient: APIClient, dataholder: DataHolder) {
         self.apiClient = apiClient
         self.dataholder = dataholder
     }
-    
+
     func postPhoto(_ post: Post, _ completion: @escaping ((Result<Data>) -> Void)) {
         guard let url = URL(string: Constants.API.urlPostAdress) else { return }
         do {
@@ -34,16 +33,16 @@ final class Repository {
             print(error)
         }
     }
-    
+
     func getSiteData(from type: DataStorageType, _ completion: @escaping ((Result<Data>) -> Void)) {
         if let data = dataholder.load(type) {
             completion(.success(data))        } else {
             completion(.failure(APIClientError.noData))
         }
     }
-    
+
     func saveData (_ data: Data) {
     dataholder.save(data)
     }
-    
+
 }

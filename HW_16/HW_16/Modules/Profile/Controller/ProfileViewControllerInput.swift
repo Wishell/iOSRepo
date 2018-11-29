@@ -8,5 +8,7 @@
 import UIKit
 
 protocol ProfileViewControllerInput: class {
+
    func saveData ( data: Data )
+
 }

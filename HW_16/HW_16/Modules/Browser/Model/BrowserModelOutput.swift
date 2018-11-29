@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BrowserModelOutput: class {
-    
+
     func modelDidLoad(_ data: Data)
     func modelDidFail(_ error: Error?)
 

@@ -9,10 +9,10 @@
 import Foundation
 
 final class BrowserModel: BrowserModelInput {
-    
+
     weak var output: BrowserModelOutput!
     var repository: Repository!
-    
+
     func load (_ type: DataStorageType) {
         repository.getSiteData(from: type) { (result) in
             switch result {
@@ -23,5 +23,5 @@ final class BrowserModel: BrowserModelInput {
             }
         }
     }
-    
+
 }

@@ -9,4 +9,5 @@
 protocol ProfileModelOutput: class {
     func modelDidFail(error: Error?)
     func modelDidLoad()
+
 }

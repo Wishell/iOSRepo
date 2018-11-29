@@ -9,20 +9,18 @@
 import Foundation
 
 final class DataHolder {
-    
+
     var database: DataBase!
 
-    
-    init (database: DataBase){
+    init (database: DataBase) {
         self.database = database
     }
-    
-    
-    func save(_ data: Data){
+
+    func save(_ data: Data) {
         database.save(data: data)
         Defaults.setData(for: Constants.Defaults.siteName, data: data)
     }
-    
+
     func load(_ type: DataStorageType) -> Data? {
         switch type {
         case .realmStorage:
@@ -31,5 +29,5 @@ final class DataHolder {
             return Defaults.getData(for: Constants.Defaults.siteName)
         }
     }
-    
+
 }

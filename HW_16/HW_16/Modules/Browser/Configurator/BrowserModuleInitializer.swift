@@ -9,12 +9,12 @@
 import UIKit
 
 final class BrowserModuleInitializer: NSObject {
-    
+
     @IBOutlet weak var viewController: BrowserViewController!
-    
+
     override func awakeFromNib() {
         let configurator = BrowserModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: viewController)
     }
-    
+
 }

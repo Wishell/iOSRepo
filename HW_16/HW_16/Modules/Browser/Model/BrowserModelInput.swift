@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BrowserModelInput {
-    
+
     func load(_ type: DataStorageType)
-    
+
 }

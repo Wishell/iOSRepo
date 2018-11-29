@@ -6,4 +6,4 @@
 //  Copyright © 2018 Wishell. All rights reserved.
 //
 
-protocol BrowserViewControllerInput: class {}
+protocol BrowserViewControllerInput: class { }

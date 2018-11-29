@@ -14,6 +14,7 @@ protocol ProfileViewInput: class {
     var getPicture: (() -> Void)? {get set}
     var post: ((_ picture: Data) -> Void)? {get set}
     func setPicture(_ picture: UIImage)
+
 }
 
 final class ProfileView: UIView {

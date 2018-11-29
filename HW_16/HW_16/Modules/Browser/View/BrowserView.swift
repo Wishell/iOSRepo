@@ -9,27 +9,9 @@
 import UIKit
 import WebKit
 
-protocol BrowserViewInput: class {
-   // var attach:((WKWebView)->Void)? {get set}
-    func load()
-}
+protocol BrowserViewInput: class { }
 
-final class BrowserView: UIView {
-    
-   // var attach:((WKWebView)->Void)?
-}
+final class BrowserView: UIView { }
 
 // MARK: - BrowserViewInput
-extension BrowserView: BrowserViewInput {
-    func load(){
-       // attach?(self)
-        let url = URL(string: Constants.Defaults.siteName)!
-        let database = DataBase()
-        
-        //guard let data = database.load()Defaults.getData(for: Constants.Defaults.siteName) else {return}
-        let data = database.get()
-      //  self.load(data, mimeType: Constants.API.mimeHtml, characterEncodingName: "UTF-8", baseURL: url)
-     //   self.allowsBackForwardNavigationGestures = true
-    }
-    
-}
+extension BrowserView: BrowserViewInput { }
